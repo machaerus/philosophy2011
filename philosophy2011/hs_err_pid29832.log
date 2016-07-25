@@ -1,0 +1,1397 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f676117e51a, pid=29832, tid=140082693408512
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_40-b43) (build 1.7.0_40-b43)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (24.0-b56 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [i965_dri.so+0x2fb51a]  __driDriverGetExtensions_i915+0x25c2a
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f67d02e9800):  JavaThread "AWT-EventQueue-0" [_thread_in_native, id=29889, stack(0x00007f678b1e0000,0x00007f678b2e1000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000100000000
+
+Registers:
+RAX=0x00007f676117e510, RBX=0x00007f676cf7fdd0, RCX=0x0000000000000000, RDX=0x0000000000000001
+RSP=0x00007f678b2de500, RBP=0x0000000000000000, RSI=0x00007f676cf7fec0, RDI=0x0000000100000000
+R8 =0x0000000000000000, R9 =0x00007f678880c710, R10=0x00007f67cd018acd, R11=0x00007f67d8948260
+R12=0x00007f67702787e0, R13=0x00007f6770278330, R14=0x00007f6770287450, R15=0x0000000000000000
+RIP=0x00007f676117e51a, EFLAGS=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f678b2de500)
+0x00007f678b2de500:   0000000000000000 00007f676cf7fdd0
+0x00007f678b2de510:   0000000000000000 00007f67702787e0
+0x00007f678b2de520:   00007f6770278330 00007f678880c7b2
+0x00007f678b2de530:   00007f678b2de560 00007f6700000000
+0x00007f678b2de540:   0000000000000000 0000000000000000
+0x00007f678b2de550:   0000000002a00029 00007f67887ddb31
+0x00007f678b2de560:   00007f676cf7fdd0 b84c0572433c2f00
+0x00007f678b2de570:   0000000002a00029 000000009f5e86c0
+0x00007f678b2de580:   00007f678b2de5f0 0000000000000000
+0x00007f678b2de590:   000000009f5e86c0 00007f678b2de6b8
+0x00007f678b2de5a0:   00007f67d02e9800 00007f6762daeb5a
+0x00007f678b2de5b0:   00007f678b2de5c8 00007f67887ddb60
+0x00007f678b2de5c0:   0000000002a00029 00007f6770276210
+0x00007f678b2de5d0:   00007f678b2de680 00007f67d02e99e8
+0x00007f678b2de5e0:   00007f678b2de5e0 00007f67887ddb60
+0x00007f678b2de5f0:   00007f678b2de670 00007f67cd018af9
+0x00007f678b2de600:   0000000000000000 000000009f6d9fe0
+0x00007f678b2de610:   0000000000000000 0000000002a00029
+0x00007f678b2de620:   00007f678b2de680 00007f678b2de628
+0x00007f678b2de630:   00007f678b2de630 0000000000000000
+0x00007f678b2de640:   00007f678b2de6b8 000000009f5ea610
+0x00007f678b2de650:   0000000000000000 000000009f5e86c0
+0x00007f678b2de660:   0000000000000000 00007f678b2de690
+0x00007f678b2de670:   00007f678b2de700 00007f67cd0060d8
+0x00007f678b2de680:   00000000a3d74f10 00007f67cd012f38
+0x00007f678b2de690:   00007f67887ddb60 000000009f5fa920
+0x00007f678b2de6a0:   0000000002a00029 000000009f5cce20
+0x00007f678b2de6b0:   00007f6770276210 00000000a3d75250
+0x00007f678b2de6c0:   00007f678b2de6c0 000000009f5e85f1
+0x00007f678b2de6d0:   00007f678b2de738 000000009f5ea610
+0x00007f678b2de6e0:   0000000000000000 000000009f5e8600
+0x00007f678b2de6f0:   00007f678b2de690 00007f678b2de720 
+
+Instructions: (pc=0x00007f676117e51a)
+0x00007f676117e4fa:   ff 58 5a eb 99 90 5b 5d 41 5c c3 66 66 2e 0f 1f
+0x00007f676117e50a:   84 00 00 00 00 00 41 55 41 54 55 53 48 83 ec 08
+0x00007f676117e51a:   48 8b 1f 48 85 db 74 41 f6 83 40 05 00 00 01 89
+0x00007f676117e52a:   cd 41 89 d5 49 89 f4 75 75 41 83 e5 01 75 5f 83 
+
+Register to memory mapping:
+
+RAX=0x00007f676117e510: <offset 0x2fb510> in /usr/lib/x86_64-linux-gnu/dri/i965_dri.so at 0x00007f6760e83000
+RBX=0x00007f676cf7fdd0 is an unknown value
+RCX=0x0000000000000000 is an unknown value
+RDX=0x0000000000000001 is an unknown value
+RSP=0x00007f678b2de500 is pointing into the stack for thread: 0x00007f67d02e9800
+RBP=0x0000000000000000 is an unknown value
+RSI=0x00007f676cf7fec0 is an unknown value
+RDI=0x0000000100000000 is an unknown value
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007f678880c710: <offset 0x4b710> in /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1 at 0x00007f67887c1000
+R10=0x00007f67cd018acd is at code_begin+1197 in an Interpreter codelet
+method entry point (kind = native)  [0x00007f67cd018620, 0x00007f67cd019420]  3584 bytes
+R11=0x00007f67d8948260: <offset 0x8a7260> in /home/nikola/apps/processing-2.2.1/java/lib/amd64/server/libjvm.so at 0x00007f67d80a1000
+R12=0x00007f67702787e0 is an unknown value
+R13=0x00007f6770278330 is an unknown value
+R14=0x00007f6770287450 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x00007f678b1e0000,0x00007f678b2e1000],  sp=0x00007f678b2de500,  free space=1017k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [i965_dri.so+0x2fb51a]  __driDriverGetExtensions_i915+0x25c2a
+
+[error occurred during error reporting (printing native stack), id 0xb]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  jogamp.opengl.x11.glx.GLX.dispatch_glXSwapBuffers0(JJJ)V+0
+j  jogamp.opengl.x11.glx.GLX.glXSwapBuffers(JJ)V+41
+j  jogamp.opengl.x11.glx.X11GLXDrawable.swapBuffersImpl(Z)V+17
+j  jogamp.opengl.GLDrawableImpl.swapBuffers()V+67
+j  javax.media.opengl.awt.GLCanvas$12.run()V+45
+j  java.awt.event.InvocationEvent.dispatch()V+11
+j  java.awt.EventQueue.dispatchEventImpl(Ljava/awt/AWTEvent;Ljava/lang/Object;)V+21
+j  java.awt.EventQueue.access$200(Ljava/awt/EventQueue;Ljava/awt/AWTEvent;Ljava/lang/Object;)V+3
+j  java.awt.EventQueue$3.run()Ljava/lang/Void;+12
+j  java.awt.EventQueue$3.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.security.ProtectionDomain$1.doIntersectionPrivilege(Ljava/security/PrivilegedAction;Ljava/security/AccessControlContext;Ljava/security/AccessControlContext;)Ljava/lang/Object;+28
+j  java.awt.EventQueue.dispatchEvent(Ljava/awt/AWTEvent;)V+46
+j  java.awt.EventDispatchThread.pumpOneEventForFilters(I)V+245
+j  java.awt.EventDispatchThread.pumpEventsForFilter(ILjava/awt/Conditional;Ljava/awt/EventFilter;)V+35
+j  java.awt.EventDispatchThread.pumpEventsForHierarchy(ILjava/awt/Conditional;Ljava/awt/Component;)V+11
+j  java.awt.EventDispatchThread.pumpEvents(ILjava/awt/Conditional;)V+4
+j  java.awt.EventDispatchThread.pumpEvents(Ljava/awt/Conditional;)V+3
+j  java.awt.EventDispatchThread.run()V+9
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x00007f676d52b800 JavaThread "Thread-6" [_thread_blocked, id=30010, stack(0x00007f675f0e2000,0x00007f675f1e3000)]
+  0x00007f676d4fb000 JavaThread "Thread-5" [_thread_blocked, id=30005, stack(0x00007f675f1e3000,0x00007f675f2e4000)]
+  0x00007f676d4f6000 JavaThread "Thread-4" [_thread_blocked, id=30003, stack(0x00007f678806b000,0x00007f678816c000)]
+  0x00007f676d4ed800 JavaThread "Thread-3" [_thread_blocked, id=29999, stack(0x00007f678a0e4000,0x00007f678a1e5000)]
+  0x00007f676d4e0800 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=29997, stack(0x00007f678a2f1000,0x00007f678a3f2000)]
+  0x00007f6770260800 JavaThread "Animation Thread-SharedResourceRunner" daemon [_thread_blocked, id=29979, stack(0x00007f678a479000,0x00007f678a57a000)]
+  0x00007f67d000f000 JavaThread "DestroyJavaVM" [_thread_blocked, id=29834, stack(0x00007f67d9a09000,0x00007f67d9b0a000)]
+  0x00007f67d02f5800 JavaThread "Animation Thread" [_thread_blocked, id=29892, stack(0x00007f678b0df000,0x00007f678b1e0000)]
+=>0x00007f67d02e9800 JavaThread "AWT-EventQueue-0" [_thread_in_native, id=29889, stack(0x00007f678b1e0000,0x00007f678b2e1000)]
+  0x00007f67d02e7800 JavaThread "AWT-Shutdown" [_thread_blocked, id=29888, stack(0x00007f678b2e1000,0x00007f678b3e2000)]
+  0x00007f67d02ab000 JavaThread "AWT-XAWT" daemon [_thread_blocked, id=29883, stack(0x00007f678b5e4000,0x00007f678b6e5000)]
+  0x00007f67d027e800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=29882, stack(0x00007f678baf5000,0x00007f678bbf6000)]
+  0x00007f67d00ab000 JavaThread "Service Thread" daemon [_thread_blocked, id=29876, stack(0x00007f67c9423000,0x00007f67c9524000)]
+  0x00007f67d00a9000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=29875, stack(0x00007f67c9524000,0x00007f67c9625000)]
+  0x00007f67d00a6000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=29874, stack(0x00007f67c9625000,0x00007f67c9726000)]
+  0x00007f67a8001000 JavaThread "JDWP Command Reader" daemon [_thread_in_native, id=29851, stack(0x00007f67c9726000,0x00007f67c9827000)]
+  0x00007f67d00a3800 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=29846, stack(0x00007f67c9827000,0x00007f67c9928000)]
+  0x00007f67d00a0000 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_blocked, id=29845, stack(0x00007f67c9928000,0x00007f67c9a29000)]
+  0x00007f67d0089800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=29844, stack(0x00007f67c9c2d000,0x00007f67c9d2e000)]
+  0x00007f67d0073800 JavaThread "Finalizer" daemon [_thread_blocked, id=29841, stack(0x00007f67c9d2e000,0x00007f67c9e2f000)]
+  0x00007f67d0071800 JavaThread "Reference Handler" daemon [_thread_blocked, id=29840, stack(0x00007f67c9e2f000,0x00007f67c9f30000)]
+
+Other Threads:
+  0x00007f67d006f000 VMThread [stack: 0x00007f67d40c6000,0x00007f67d41c7000] [id=29839]
+  0x00007f67d00b6000 WatcherThread [stack: 0x00007f67c9322000,0x00007f67c9423000] [id=29877]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 52736K, used 51716K [0x00000000e1280000, 0x00000000e9080000, 0x0000000100000000)
+  eden space 49152K, 97% used [0x00000000e1280000,0x00000000e4181210,0x00000000e4280000)
+  from space 3584K, 100% used [0x00000000e4280000,0x00000000e4600000,0x00000000e4600000)
+  to   space 15360K, 0% used [0x00000000e8180000,0x00000000e8180000,0x00000000e9080000)
+ ParOldGen       total 62976K, used 21691K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 34% used [0x00000000a3800000,0x00000000a4d2edd0,0x00000000a7580000)
+ PSPermGen       total 21504K, used 19460K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 90% used [0x000000009e600000,0x000000009f9013a8,0x000000009fb00000)
+
+Card table byte_map: [0x00007f67d5da4000,0x00007f67d60b2000] byte_map_base: 0x00007f67d58b1000
+
+Polling page: 0x00007f67d9b24000
+
+Code Cache  [0x00007f67cd000000, 0x00007f67cd270000, 0x00007f67d0000000)
+ total_blobs=1414 nmethods=523 adapters=852 free_code_cache=46735Kb largest_free_block=47809856
+
+Compilation events (10 events):
+Event: 104,944 Thread 0x00007f67d00a6000  568             java.nio.DirectIntBufferU::isDirect (2 bytes)
+Event: 104,944 Thread 0x00007f67d00a9000  569             com.jogamp.common.util.VersionNumber::getMajor (5 bytes)
+Event: 104,944 Thread 0x00007f67d00a9000 nmethod 569 0x00007f67cd2289d0 code [0x00007f67cd228b00, 0x00007f67cd228b58]
+Event: 104,944 Thread 0x00007f67d00a6000 nmethod 568 0x00007f67cd1d7cd0 code [0x00007f67cd1d7e00, 0x00007f67cd1d7e58]
+Event: 105,993 Thread 0x00007f67d00a6000  570             sun.awt.SunToolkit::getSystemEventQueueImplPP (13 bytes)
+Event: 105,993 Thread 0x00007f67d00a9000  571             sun.awt.SunToolkit::getSystemEventQueueImpl (4 bytes)
+Event: 105,995 Thread 0x00007f67d00a6000 nmethod 570 0x00007f67cd1d7750 code [0x00007f67cd1d78a0, 0x00007f67cd1d7968]
+Event: 105,995 Thread 0x00007f67d00a6000  572             sun.awt.SunToolkit::getSystemEventQueueImplPP (7 bytes)
+Event: 105,996 Thread 0x00007f67d00a9000 nmethod 571 0x00007f67cd25e490 code [0x00007f67cd25e620, 0x00007f67cd25e7f8]
+Event: 105,999 Thread 0x00007f67d00a6000 nmethod 572 0x00007f67cd25df10 code [0x00007f67cd25e0a0, 0x00007f67cd25e238]
+
+GC Heap History (10 events):
+Event: 2,517 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 28160K, used 24576K [0x00000000e1280000, 0x00000000e3180000, 0x0000000100000000)
+  eden space 24576K, 100% used [0x00000000e1280000,0x00000000e2a80000,0x00000000e2a80000)
+  from space 3584K, 0% used [0x00000000e2e00000,0x00000000e2e00000,0x00000000e3180000)
+  to   space 3584K, 0% used [0x00000000e2a80000,0x00000000e2a80000,0x00000000e2e00000)
+ ParOldGen       total 62976K, used 0K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 0% used [0x00000000a3800000,0x00000000a3800000,0x00000000a7580000)
+ PSPermGen       total 21504K, used 9460K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 43% used [0x000000009e600000,0x000000009ef3d398,0x000000009fb00000)
+Event: 2,535 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 28160K, used 3552K [0x00000000e1280000, 0x00000000e3180000, 0x0000000100000000)
+  eden space 24576K, 0% used [0x00000000e1280000,0x00000000e1280000,0x00000000e2a80000)
+  from space 3584K, 99% used [0x00000000e2a80000,0x00000000e2df8060,0x00000000e2e00000)
+  to   space 3584K, 0% used [0x00000000e2e00000,0x00000000e2e00000,0x00000000e3180000)
+ ParOldGen       total 62976K, used 1497K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 2% used [0x00000000a3800000,0x00000000a3976548,0x00000000a7580000)
+ PSPermGen       total 21504K, used 9460K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 43% used [0x000000009e600000,0x000000009ef3d398,0x000000009fb00000)
+}
+Event: 3,365 GC heap before
+{Heap before GC invocations=2 (full 0):
+ PSYoungGen      total 28160K, used 28128K [0x00000000e1280000, 0x00000000e3180000, 0x0000000100000000)
+  eden space 24576K, 100% used [0x00000000e1280000,0x00000000e2a80000,0x00000000e2a80000)
+  from space 3584K, 99% used [0x00000000e2a80000,0x00000000e2df8060,0x00000000e2e00000)
+  to   space 3584K, 0% used [0x00000000e2e00000,0x00000000e2e00000,0x00000000e3180000)
+ ParOldGen       total 62976K, used 1497K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 2% used [0x00000000a3800000,0x00000000a3976548,0x00000000a7580000)
+ PSPermGen       total 21504K, used 9509K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 44% used [0x000000009e600000,0x000000009ef494f0,0x000000009fb00000)
+Event: 3,391 GC heap after
+Heap after GC invocations=2 (full 0):
+ PSYoungGen      total 28160K, used 3584K [0x00000000e1280000, 0x00000000e4980000, 0x0000000100000000)
+  eden space 24576K, 0% used [0x00000000e1280000,0x00000000e1280000,0x00000000e2a80000)
+  from space 3584K, 100% used [0x00000000e2e00000,0x00000000e3180000,0x00000000e3180000)
+  to   space 3584K, 0% used [0x00000000e2a80000,0x00000000e2a80000,0x00000000e2e00000)
+ ParOldGen       total 62976K, used 5457K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 8% used [0x00000000a3800000,0x00000000a3d54690,0x00000000a7580000)
+ PSPermGen       total 21504K, used 9509K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 44% used [0x000000009e600000,0x000000009ef494f0,0x000000009fb00000)
+}
+Event: 4,794 GC heap before
+{Heap before GC invocations=3 (full 0):
+ PSYoungGen      total 28160K, used 27978K [0x00000000e1280000, 0x00000000e4980000, 0x0000000100000000)
+  eden space 24576K, 99% used [0x00000000e1280000,0x00000000e2a52bf0,0x00000000e2a80000)
+  from space 3584K, 100% used [0x00000000e2e00000,0x00000000e3180000,0x00000000e3180000)
+  to   space 3584K, 0% used [0x00000000e2a80000,0x00000000e2a80000,0x00000000e2e00000)
+ ParOldGen       total 62976K, used 5457K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 8% used [0x00000000a3800000,0x00000000a3d54690,0x00000000a7580000)
+ PSPermGen       total 21504K, used 17944K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 83% used [0x000000009e600000,0x000000009f786260,0x000000009fb00000)
+Event: 4,823 GC heap after
+Heap after GC invocations=3 (full 0):
+ PSYoungGen      total 28160K, used 3584K [0x00000000e1280000, 0x00000000e4980000, 0x0000000100000000)
+  eden space 24576K, 0% used [0x00000000e1280000,0x00000000e1280000,0x00000000e2a80000)
+  from space 3584K, 100% used [0x00000000e2a80000,0x00000000e2e00000,0x00000000e2e00000)
+  to   space 3584K, 0% used [0x00000000e4600000,0x00000000e4600000,0x00000000e4980000)
+ ParOldGen       total 62976K, used 11474K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 18% used [0x00000000a3800000,0x00000000a4334b88,0x00000000a7580000)
+ PSPermGen       total 21504K, used 17944K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 83% used [0x000000009e600000,0x000000009f786260,0x000000009fb00000)
+}
+Event: 10,883 GC heap before
+{Heap before GC invocations=4 (full 0):
+ PSYoungGen      total 28160K, used 28160K [0x00000000e1280000, 0x00000000e4980000, 0x0000000100000000)
+  eden space 24576K, 100% used [0x00000000e1280000,0x00000000e2a80000,0x00000000e2a80000)
+  from space 3584K, 100% used [0x00000000e2a80000,0x00000000e2e00000,0x00000000e2e00000)
+  to   space 3584K, 0% used [0x00000000e4600000,0x00000000e4600000,0x00000000e4980000)
+ ParOldGen       total 62976K, used 11474K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 18% used [0x00000000a3800000,0x00000000a4334b88,0x00000000a7580000)
+ PSPermGen       total 21504K, used 19257K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 89% used [0x000000009e600000,0x000000009f8ce6c8,0x000000009fb00000)
+Event: 10,907 GC heap after
+Heap after GC invocations=4 (full 0):
+ PSYoungGen      total 52736K, used 3584K [0x00000000e1280000, 0x00000000e4980000, 0x0000000100000000)
+  eden space 49152K, 0% used [0x00000000e1280000,0x00000000e1280000,0x00000000e4280000)
+  from space 3584K, 100% used [0x00000000e4600000,0x00000000e4980000,0x00000000e4980000)
+  to   space 3584K, 0% used [0x00000000e4280000,0x00000000e4280000,0x00000000e4600000)
+ ParOldGen       total 62976K, used 21563K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 34% used [0x00000000a3800000,0x00000000a4d0ec80,0x00000000a7580000)
+ PSPermGen       total 21504K, used 19257K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 89% used [0x000000009e600000,0x000000009f8ce6c8,0x000000009fb00000)
+}
+Event: 59,392 GC heap before
+{Heap before GC invocations=5 (full 0):
+ PSYoungGen      total 52736K, used 52736K [0x00000000e1280000, 0x00000000e4980000, 0x0000000100000000)
+  eden space 49152K, 100% used [0x00000000e1280000,0x00000000e4280000,0x00000000e4280000)
+  from space 3584K, 100% used [0x00000000e4600000,0x00000000e4980000,0x00000000e4980000)
+  to   space 3584K, 0% used [0x00000000e4280000,0x00000000e4280000,0x00000000e4600000)
+ ParOldGen       total 62976K, used 21563K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 34% used [0x00000000a3800000,0x00000000a4d0ec80,0x00000000a7580000)
+ PSPermGen       total 21504K, used 19368K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 90% used [0x000000009e600000,0x000000009f8ea3e0,0x000000009fb00000)
+Event: 59,407 GC heap after
+Heap after GC invocations=5 (full 0):
+ PSYoungGen      total 52736K, used 3584K [0x00000000e1280000, 0x00000000e9080000, 0x0000000100000000)
+  eden space 49152K, 0% used [0x00000000e1280000,0x00000000e1280000,0x00000000e4280000)
+  from space 3584K, 100% used [0x00000000e4280000,0x00000000e4600000,0x00000000e4600000)
+  to   space 15360K, 0% used [0x00000000e8180000,0x00000000e8180000,0x00000000e9080000)
+ ParOldGen       total 62976K, used 21691K [0x00000000a3800000, 0x00000000a7580000, 0x00000000e1280000)
+  object space 62976K, 34% used [0x00000000a3800000,0x00000000a4d2edd0,0x00000000a7580000)
+ PSPermGen       total 21504K, used 19368K [0x000000009e600000, 0x000000009fb00000, 0x00000000a3800000)
+  object space 21504K, 90% used [0x000000009e600000,0x000000009f8ea3e0,0x000000009fb00000)
+}
+
+Deoptimization events (10 events):
+Event: 40,943 Thread 0x00007f67d02e9800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f67cd1fc734 method=philosophy2011.draw()V @ 53
+Event: 40,996 Thread 0x00007f67d02e9800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f67cd1fc734 method=philosophy2011.draw()V @ 53
+Event: 41,053 Thread 0x00007f67d02e9800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f67cd1fc734 method=philosophy2011.draw()V @ 53
+Event: 43,385 Thread 0x00007f67d02e9800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f67cd1f7e90 method=philosophy2011.draw()V @ 192
+Event: 43,607 Thread 0x00007f67d02e9800 Uncommon trap: reason=class_check action=maybe_recompile pc=0x00007f67cd1f7e90 method=philosophy2011.draw()V @ 192
+Event: 95,774 Thread 0x00007f67d02e9800 Uncommon trap: reason=predicate action=maybe_recompile pc=0x00007f67cd22cfc4 method=java.util.Arrays.fill([Ljava/lang/Object;IILjava/lang/Object;)V @ 16
+Event: 97,002 Thread 0x00007f67d02e9800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f67cd258f60 method=java.util.Arrays.fill([Ljava/lang/Object;IILjava/lang/Object;)V @ 20
+Event: 97,056 Thread 0x00007f67d02e9800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f67cd258f60 method=java.util.Arrays.fill([Ljava/lang/Object;IILjava/lang/Object;)V @ 20
+Event: 97,109 Thread 0x00007f67d02e9800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f67cd258f60 method=java.util.Arrays.fill([Ljava/lang/Object;IILjava/lang/Object;)V @ 20
+Event: 97,167 Thread 0x00007f67d02e9800 Uncommon trap: reason=array_check action=maybe_recompile pc=0x00007f67cd258f60 method=java.util.Arrays.fill([Ljava/lang/Object;IILjava/lang/Object;)V @ 20
+
+Internal exceptions (10 events):
+Event: 5,858 Thread 0x00007f67d02e9800 Threw 0x00000000e2451508 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/runtime/reflection.cpp:1030
+Event: 5,859 Thread 0x00007f67d02e9800 Threw 0x00000000e24517c8 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/runtime/reflection.cpp:1030
+Event: 5,964 Thread 0x00007f67d02e9800 Threw 0x00000000e2452300 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/runtime/reflection.cpp:1030
+Event: 5,965 Thread 0x00007f67d02e9800 Threw 0x00000000e24525c0 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/runtime/reflection.cpp:1030
+Event: 6,077 Thread 0x00007f67d02e9800 Threw 0x00000000e24557e8 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/runtime/reflection.cpp:1030
+Event: 37,388 Thread 0x00007f67d02e9800 Threw 0x00000000e2badb00 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 37,389 Thread 0x00007f67d02e9800 Threw 0x00000000e2bafec0 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 40,778 Thread 0x00007f67d02e9800 Threw 0x00000000e2f1aba8 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 104,942 Thread 0x00007f67d02e9800 Threw 0x00000000e3e93870 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 104,952 Thread 0x00007f67d02e9800 Threw 0x00000000e3e9d790 at /HUDSON/workspace/jdk7u40-2-build-linux-amd64-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+
+Events (10 events):
+Event: 99,943 Executing VM operation: RevokeBias
+Event: 99,943 Executing VM operation: RevokeBias done
+Event: 99,943 Thread 0x00007f676dad0000 Thread exited: 0x00007f676dad0000
+Event: 99,944 Executing VM operation: RevokeBias
+Event: 99,944 Executing VM operation: RevokeBias done
+Event: 99,944 Thread 0x00007f676dad1800 Thread exited: 0x00007f676dad1800
+Event: 104,942 loading class 0x00007f67700ea6a0
+Event: 104,942 loading class 0x00007f67700ea6a0 done
+Event: 104,952 loading class 0x00007f67700efb30
+Event: 104,952 loading class 0x00007f67700efb30 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:02 21002970                           /home/nikola/apps/processing-2.2.1/java/bin/java
+00600000-00601000 rw-p 00000000 08:02 21002970                           /home/nikola/apps/processing-2.2.1/java/bin/java
+00b3c000-00b5d000 rw-p 00000000 00:00 0                                  [heap]
+9e600000-9fb00000 rw-p 00000000 00:00 0 
+9fb00000-a3800000 rw-p 00000000 00:00 0 
+a3800000-a7580000 rw-p 00000000 00:00 0 
+a7580000-e1280000 rw-p 00000000 00:00 0 
+e1280000-e9080000 rw-p 00000000 00:00 0 
+e9080000-100000000 rw-p 00000000 00:00 0 
+7f672bffd000-7f672fffe000 rw-s 00000000 00:14 377329                     /run/shm/pulse-shm-812179188
+7f672fffe000-7f6733fff000 rw-s 00000000 00:14 376825                     /run/shm/pulse-shm-2431514239
+7f6733fff000-7f6738000000 rw-s 00000000 00:14 378275                     /run/shm/pulse-shm-3033735591
+7f6738000000-7f673824d000 rw-p 00000000 00:00 0 
+7f673824d000-7f673c000000 ---p 00000000 00:00 0 
+7f673c000000-7f673c021000 rw-p 00000000 00:00 0 
+7f673c021000-7f6740000000 ---p 00000000 00:00 0 
+7f6740000000-7f6740406000 rw-p 00000000 00:00 0 
+7f6740406000-7f6744000000 ---p 00000000 00:00 0 
+7f67467fc000-7f67467fd000 ---p 00000000 00:00 0 
+7f67467fd000-7f6746ffd000 rw-p 00000000 00:00 0                          [stack:30009]
+7f6746ffd000-7f6746ffe000 ---p 00000000 00:00 0 
+7f6746ffe000-7f67477fe000 rw-p 00000000 00:00 0                          [stack:30008]
+7f67477fe000-7f67477ff000 ---p 00000000 00:00 0 
+7f67477ff000-7f6747fff000 rw-p 00000000 00:00 0                          [stack:30004]
+7f6747fff000-7f674c000000 rw-s 00000000 00:14 378269                     /run/shm/pulse-shm-2468219591
+7f674c000000-7f674c021000 rw-p 00000000 00:00 0 
+7f674c021000-7f6750000000 ---p 00000000 00:00 0 
+7f6750000000-7f6750021000 rw-p 00000000 00:00 0 
+7f6750021000-7f6754000000 ---p 00000000 00:00 0 
+7f6754000000-7f6754021000 rw-p 00000000 00:00 0 
+7f6754021000-7f6758000000 ---p 00000000 00:00 0 
+7f6758200000-7f6758201000 ---p 00000000 00:00 0 
+7f6758201000-7f6758a01000 rw-p 00000000 00:00 0                          [stack:30002]
+7f6758a01000-7f6758a02000 ---p 00000000 00:00 0 
+7f6758a02000-7f6759202000 rw-p 00000000 00:00 0                          [stack:29998]
+7f6759202000-7f675d203000 rw-s 00000000 00:14 376816                     /run/shm/pulse-shm-4043032387
+7f675d203000-7f675d209000 r-xp 00000000 08:01 399307                     /usr/lib/x86_64-linux-gnu/alsa-lib/libasound_module_pcm_pulse.so
+7f675d209000-7f675d408000 ---p 00006000 08:01 399307                     /usr/lib/x86_64-linux-gnu/alsa-lib/libasound_module_pcm_pulse.so
+7f675d408000-7f675d409000 r--p 00005000 08:01 399307                     /usr/lib/x86_64-linux-gnu/alsa-lib/libasound_module_pcm_pulse.so
+7f675d409000-7f675d40a000 rw-p 00006000 08:01 399307                     /usr/lib/x86_64-linux-gnu/alsa-lib/libasound_module_pcm_pulse.so
+7f675d40a000-7f675d421000 r-xp 00000000 08:01 393315                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f675d421000-7f675d621000 ---p 00017000 08:01 393315                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f675d621000-7f675d622000 r--p 00017000 08:01 393315                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f675d622000-7f675d623000 rw-p 00018000 08:01 393315                     /lib/x86_64-linux-gnu/libresolv-2.19.so
+7f675d623000-7f675d625000 rw-p 00000000 00:00 0 
+7f675d625000-7f675d62c000 r-xp 00000000 08:01 272403                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f675d62c000-7f675d82c000 ---p 00007000 08:01 272403                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f675d82c000-7f675d82d000 r--p 00007000 08:01 272403                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f675d82d000-7f675d82e000 rw-p 00008000 08:01 272403                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.2
+7f675d82e000-7f675d85a000 r-xp 00000000 08:01 272678                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f675d85a000-7f675da59000 ---p 0002c000 08:01 272678                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f675da59000-7f675da5a000 r--p 0002b000 08:01 272678                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f675da5a000-7f675da5b000 rw-p 0002c000 08:01 272678                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f675da5b000-7f675dd0e000 r-xp 00000000 08:01 272680                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f675dd0e000-7f675df0d000 ---p 002b3000 08:01 272680                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f675df0d000-7f675df29000 r--p 002b2000 08:01 272680                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f675df29000-7f675df2a000 rw-p 002ce000 08:01 272680                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f675df2a000-7f675df5a000 r-xp 00000000 08:01 267358                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f675df5a000-7f675e15a000 ---p 00030000 08:01 267358                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f675e15a000-7f675e15c000 r--p 00030000 08:01 267358                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f675e15c000-7f675e15d000 rw-p 00032000 08:01 267358                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.3.0
+7f675e15d000-7f675e162000 r-xp 00000000 08:01 271753                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f675e162000-7f675e361000 ---p 00005000 08:01 271753                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f675e361000-7f675e362000 r--p 00004000 08:01 271753                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f675e362000-7f675e363000 rw-p 00005000 08:01 271753                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f675e363000-7f675e3c4000 r-xp 00000000 08:01 272570                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f675e3c4000-7f675e5c3000 ---p 00061000 08:01 272570                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f675e5c3000-7f675e5c5000 r--p 00060000 08:01 272570                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f675e5c5000-7f675e5c6000 rw-p 00062000 08:01 272570                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f675e5c6000-7f675e5ca000 rw-p 00000000 00:00 0 
+7f675e5ca000-7f675e5d2000 r-xp 00000000 08:01 397809                     /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f675e5d2000-7f675e7d1000 ---p 00008000 08:01 397809                     /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f675e7d1000-7f675e7d2000 r--p 00007000 08:01 397809                     /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f675e7d2000-7f675e7d3000 rw-p 00008000 08:01 397809                     /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f675e7d3000-7f675e7d4000 rw-p 00000000 00:00 0 
+7f675e7d4000-7f675e81a000 r-xp 00000000 08:01 397543                     /lib/x86_64-linux-gnu/libdbus-1.so.3.8.7
+7f675e81a000-7f675ea19000 ---p 00046000 08:01 397543                     /lib/x86_64-linux-gnu/libdbus-1.so.3.8.7
+7f675ea19000-7f675ea1b000 r--p 00045000 08:01 397543                     /lib/x86_64-linux-gnu/libdbus-1.so.3.8.7
+7f675ea1b000-7f675ea1c000 rw-p 00047000 08:01 397543                     /lib/x86_64-linux-gnu/libdbus-1.so.3.8.7
+7f675ea1c000-7f675ea88000 r-xp 00000000 08:01 788564                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so
+7f675ea88000-7f675ec87000 ---p 0006c000 08:01 788564                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so
+7f675ec87000-7f675ec88000 r--p 0006b000 08:01 788564                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so
+7f675ec88000-7f675ec89000 rw-p 0006c000 08:01 788564                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-4.0.so
+7f675ec89000-7f675ec93000 r-xp 00000000 08:01 397682                     /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f675ec93000-7f675ee92000 ---p 0000a000 08:01 397682                     /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f675ee92000-7f675ee93000 r--p 00009000 08:01 397682                     /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f675ee93000-7f675ee94000 rw-p 0000a000 08:01 397682                     /lib/x86_64-linux-gnu/libjson-c.so.2.0.0
+7f675ee94000-7f675eee0000 r-xp 00000000 08:01 272480                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2
+7f675eee0000-7f675f0df000 ---p 0004c000 08:01 272480                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2
+7f675f0df000-7f675f0e1000 r--p 0004b000 08:01 272480                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2
+7f675f0e1000-7f675f0e2000 rw-p 0004d000 08:01 272480                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.16.2
+7f675f0e2000-7f675f0e5000 ---p 00000000 00:00 0 
+7f675f0e5000-7f675f1e3000 rw-p 00000000 00:00 0                          [stack:30010]
+7f675f1e3000-7f675f1e6000 ---p 00000000 00:00 0 
+7f675f1e6000-7f675f2e4000 rw-p 00000000 00:00 0                          [stack:30005]
+7f675f2e4000-7f675f3ce000 r-xp 00000000 08:01 271745                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f675f3ce000-7f675f5cd000 ---p 000ea000 08:01 271745                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f675f5cd000-7f675f5d4000 r--p 000e9000 08:01 271745                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f675f5d4000-7f675f5d5000 rw-p 000f0000 08:01 271745                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f675f5d5000-7f675f5e4000 r-xp 00000000 08:02 21003643                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjsoundalsa.so
+7f675f5e4000-7f675f7e3000 ---p 0000f000 08:02 21003643                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjsoundalsa.so
+7f675f7e3000-7f675f7e4000 rw-p 0000e000 08:02 21003643                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjsoundalsa.so
+7f675f7e4000-7f675f7e5000 r-xp 00000000 08:02 21003655                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjsound.so
+7f675f7e5000-7f675f9e4000 ---p 00001000 08:02 21003655                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjsound.so
+7f675f9e4000-7f675f9e5000 rw-p 00000000 08:02 21003655                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjsound.so
+7f675f9e5000-7f675fc65000 rw-s 00000000 00:04 377272                     /drm mm object (deleted)
+7f675fc65000-7f675fee5000 rw-s 00000000 00:04 377271                     /drm mm object (deleted)
+7f675fee5000-7f675ff1c000 r-xp 00000000 08:01 272644                     /usr/lib/x86_64-linux-gnu/libtxc_dxtn_s2tc.so.0.0.0
+7f675ff1c000-7f676011b000 ---p 00037000 08:01 272644                     /usr/lib/x86_64-linux-gnu/libtxc_dxtn_s2tc.so.0.0.0
+7f676011b000-7f676011c000 r--p 00036000 08:01 272644                     /usr/lib/x86_64-linux-gnu/libtxc_dxtn_s2tc.so.0.0.0
+7f676011c000-7f676011d000 rw-p 00037000 08:01 272644                     /usr/lib/x86_64-linux-gnu/libtxc_dxtn_s2tc.so.0.0.0
+7f676011d000-7f6760135000 r-xp 00000000 08:01 397811                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f6760135000-7f6760334000 ---p 00018000 08:01 397811                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f6760334000-7f6760335000 r--p 00017000 08:01 397811                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f6760335000-7f6760336000 rw-p 00018000 08:01 397811                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f6760336000-7f676033e000 r-xp 00000000 08:01 272439                     /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7f676033e000-7f676053d000 ---p 00008000 08:01 272439                     /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7f676053d000-7f676053e000 r--p 00007000 08:01 272439                     /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7f676053e000-7f676053f000 rw-p 00008000 08:01 272439                     /usr/lib/x86_64-linux-gnu/libpciaccess.so.0.11.1
+7f676053f000-7f676062f000 r-xp 00000000 08:01 272596                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7f676062f000-7f676082f000 ---p 000f0000 08:01 272596                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7f676082f000-7f6760837000 r--p 000f0000 08:01 272596                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7f6760837000-7f6760839000 rw-p 000f8000 08:01 272596                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.20
+7f6760839000-7f676084e000 rw-p 00000000 00:00 0 
+7f676084e000-7f676085a000 r-xp 00000000 08:01 271927                     /usr/lib/x86_64-linux-gnu/libdrm_radeon.so.1.0.1
+7f676085a000-7f6760a59000 ---p 0000c000 08:01 271927                     /usr/lib/x86_64-linux-gnu/libdrm_radeon.so.1.0.1
+7f6760a59000-7f6760a5a000 r--p 0000b000 08:01 271927                     /usr/lib/x86_64-linux-gnu/libdrm_radeon.so.1.0.1
+7f6760a5a000-7f6760a5b000 rw-p 0000c000 08:01 271927                     /usr/lib/x86_64-linux-gnu/libdrm_radeon.so.1.0.1
+7f6760a5b000-7f6760a61000 r-xp 00000000 08:01 271925                     /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0
+7f6760a61000-7f6760c60000 ---p 00006000 08:01 271925                     /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0
+7f6760c60000-7f6760c61000 r--p 00005000 08:01 271925                     /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0
+7f6760c61000-7f6760c62000 rw-p 00006000 08:01 271925                     /usr/lib/x86_64-linux-gnu/libdrm_nouveau.so.2.0.0
+7f6760c62000-7f6760c82000 r-xp 00000000 08:01 271923                     /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+7f6760c82000-7f6760e81000 ---p 00020000 08:01 271923                     /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+7f6760e81000-7f6760e82000 r--p 0001f000 08:01 271923                     /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+7f6760e82000-7f6760e83000 rw-p 00020000 08:01 271923                     /usr/lib/x86_64-linux-gnu/libdrm_intel.so.1.0.0
+7f6760e83000-7f676139f000 r-xp 00000000 08:01 791604                     /usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+7f676139f000-7f676159e000 ---p 0051c000 08:01 791604                     /usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+7f676159e000-7f67615ba000 r--p 0051b000 08:01 791604                     /usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+7f67615ba000-7f67615c0000 rw-p 00537000 08:01 791604                     /usr/lib/x86_64-linux-gnu/dri/i965_dri.so
+7f67615c0000-7f67615cb000 rw-p 00000000 00:00 0 
+7f67615cb000-7f6761637000 r-xp 00000000 08:01 397750                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f6761637000-7f6761836000 ---p 0006c000 08:01 397750                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f6761836000-7f6761837000 r--p 0006b000 08:01 397750                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f6761837000-7f6761838000 rw-p 0006c000 08:01 397750                     /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f6761838000-7f6761859000 r-xp 00000000 08:01 397777                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f6761859000-7f6761a58000 ---p 00021000 08:01 397777                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f6761a58000-7f6761a59000 r--p 00020000 08:01 397777                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f6761a59000-7f6761a5a000 rw-p 00021000 08:01 397777                     /lib/x86_64-linux-gnu/libselinux.so.1
+7f6761a5a000-7f6761a5c000 rw-p 00000000 00:00 0 
+7f6761a5c000-7f6761a6c000 r-xp 00000000 08:01 397539                     /lib/x86_64-linux-gnu/libudev.so.1.4.0
+7f6761a6c000-7f6761c6c000 ---p 00010000 08:01 397539                     /lib/x86_64-linux-gnu/libudev.so.1.4.0
+7f6761c6c000-7f6761c6d000 r--p 00010000 08:01 397539                     /lib/x86_64-linux-gnu/libudev.so.1.4.0
+7f6761c6d000-7f6761c6e000 rw-p 00011000 08:01 397539                     /lib/x86_64-linux-gnu/libudev.so.1.4.0
+7f6761c6e000-7f6761c70000 r-xp 00000000 08:01 271689                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f6761c70000-7f6761e6f000 ---p 00002000 08:01 271689                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f6761e6f000-7f6761e70000 r--p 00001000 08:01 271689                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f6761e70000-7f6761e71000 rw-p 00002000 08:01 271689                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f6761e71000-7f6761eb7000 r-xp 00000000 08:01 412849                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libjogl_mobile.so
+7f6761eb7000-7f67620b7000 ---p 00046000 08:01 412849                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libjogl_mobile.so
+7f67620b7000-7f67620b8000 rw-p 00046000 08:01 412849                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libjogl_mobile.so
+7f67620b8000-7f67620bf000 r-xp 00000000 08:01 271963                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7f67620bf000-7f67622be000 ---p 00007000 08:01 271963                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7f67622be000-7f67622bf000 r--p 00006000 08:01 271963                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7f67622bf000-7f67622c0000 rw-p 00007000 08:01 271963                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.2
+7f67622c0000-7f67622cd000 r-xp 00000000 08:01 265120                     /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7f67622cd000-7f67624cc000 ---p 0000d000 08:01 265120                     /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7f67624cc000-7f67624cd000 r--p 0000c000 08:01 265120                     /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7f67624cd000-7f67624ce000 rw-p 0000d000 08:01 265120                     /usr/lib/x86_64-linux-gnu/libgbm.so.1.0.0
+7f67624ce000-7f67624dc000 r-xp 00000000 08:01 272697                     /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7f67624dc000-7f67626dc000 ---p 0000e000 08:01 272697                     /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7f67626dc000-7f67626de000 r--p 0000e000 08:01 272697                     /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7f67626de000-7f67626df000 rw-p 00010000 08:01 272697                     /usr/lib/x86_64-linux-gnu/libwayland-server.so.0.1.0
+7f67626df000-7f67626ea000 r-xp 00000000 08:01 272691                     /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.2.0
+7f67626ea000-7f67628ea000 ---p 0000b000 08:01 272691                     /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.2.0
+7f67628ea000-7f67628ec000 r--p 0000b000 08:01 272691                     /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.2.0
+7f67628ec000-7f67628ed000 rw-p 0000d000 08:01 272691                     /usr/lib/x86_64-linux-gnu/libwayland-client.so.0.2.0
+7f67628ed000-7f67628f2000 r-xp 00000000 08:01 272743                     /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f67628f2000-7f6762af2000 ---p 00005000 08:01 272743                     /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f6762af2000-7f6762af3000 r--p 00005000 08:01 272743                     /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f6762af3000-7f6762af4000 rw-p 00006000 08:01 272743                     /usr/lib/x86_64-linux-gnu/libxcb-xfixes.so.0.0.0
+7f6762af4000-7f6762b1d000 r-xp 00000000 08:01 791601                     /usr/lib/x86_64-linux-gnu/mesa-egl/libEGL.so.1.0.0
+7f6762b1d000-7f6762d1c000 ---p 00029000 08:01 791601                     /usr/lib/x86_64-linux-gnu/mesa-egl/libEGL.so.1.0.0
+7f6762d1c000-7f6762d1d000 r--p 00028000 08:01 791601                     /usr/lib/x86_64-linux-gnu/mesa-egl/libEGL.so.1.0.0
+7f6762d1d000-7f6762d1e000 rw-p 00029000 08:01 791601                     /usr/lib/x86_64-linux-gnu/mesa-egl/libEGL.so.1.0.0
+7f6762d1e000-7f6762d1f000 rw-p 00000000 00:00 0 
+7f6762d1f000-7f6762dc7000 r-xp 00000000 08:01 412848                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libjogl_desktop.so
+7f6762dc7000-7f6762fc7000 ---p 000a8000 08:01 412848                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libjogl_desktop.so
+7f6762fc7000-7f6762fc8000 rw-p 000a8000 08:01 412848                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libjogl_desktop.so
+7f6762fc8000-7f6762fd3000 r-xp 00000000 08:01 271921                     /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7f6762fd3000-7f67631d2000 ---p 0000b000 08:01 271921                     /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7f67631d2000-7f67631d3000 r--p 0000a000 08:01 271921                     /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7f67631d3000-7f67631d4000 rw-p 0000b000 08:01 271921                     /usr/lib/x86_64-linux-gnu/libdrm.so.2.4.0
+7f67631d4000-7f67631d5000 r-xp 00000000 08:01 272755                     /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7f67631d5000-7f67633d4000 ---p 00001000 08:01 272755                     /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7f67633d4000-7f67633d5000 r--p 00000000 08:01 272755                     /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7f67633d5000-7f67633d6000 rw-p 00001000 08:01 272755                     /usr/lib/x86_64-linux-gnu/libxshmfence.so.1.0.0
+7f67633d6000-7f67633db000 r-xp 00000000 08:01 272737                     /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7f67633db000-7f67635da000 ---p 00005000 08:01 272737                     /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7f67635da000-7f67635db000 r--p 00004000 08:01 272737                     /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7f67635db000-7f67635dc000 rw-p 00005000 08:01 272737                     /usr/lib/x86_64-linux-gnu/libxcb-sync.so.1.0.0
+7f67635dc000-7f67635de000 r-xp 00000000 08:01 272729                     /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7f67635de000-7f67637dd000 ---p 00002000 08:01 272729                     /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7f67637dd000-7f67637de000 r--p 00001000 08:01 272729                     /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7f67637de000-7f67637df000 rw-p 00002000 08:01 272729                     /usr/lib/x86_64-linux-gnu/libxcb-present.so.0.0.0
+7f67637df000-7f67637e1000 r-xp 00000000 08:01 272719                     /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7f67637e1000-7f67639e0000 ---p 00002000 08:01 272719                     /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7f67639e0000-7f67639e1000 r--p 00001000 08:01 272719                     /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7f67639e1000-7f67639e2000 rw-p 00002000 08:01 272719                     /usr/lib/x86_64-linux-gnu/libxcb-dri3.so.0.0.0
+7f67639e2000-7f67639e5000 r-xp 00000000 08:01 272717                     /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7f67639e5000-7f6763be5000 ---p 00003000 08:01 272717                     /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7f6763be5000-7f6763be6000 r--p 00003000 08:01 272717                     /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7f6763be6000-7f6763be7000 rw-p 00004000 08:01 272717                     /usr/lib/x86_64-linux-gnu/libxcb-dri2.so.0.0.0
+7f6763be7000-7f6763bfc000 r-xp 00000000 08:01 272721                     /usr/lib/x86_64-linux-gnu/libxcb-glx.so.0.0.0
+7f6763bfc000-7f6763dfb000 ---p 00015000 08:01 272721                     /usr/lib/x86_64-linux-gnu/libxcb-glx.so.0.0.0
+7f6763dfb000-7f6763dfd000 r--p 00014000 08:01 272721                     /usr/lib/x86_64-linux-gnu/libxcb-glx.so.0.0.0
+7f6763dfd000-7f6763dfe000 rw-p 00016000 08:01 272721                     /usr/lib/x86_64-linux-gnu/libxcb-glx.so.0.0.0
+7f6763dfe000-7f6763dff000 r-xp 00000000 08:01 271660                     /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7f6763dff000-7f6763ffe000 ---p 00001000 08:01 271660                     /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7f6763ffe000-7f6763fff000 r--p 00000000 08:01 271660                     /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7f6763fff000-7f6764000000 rw-p 00001000 08:01 271660                     /usr/lib/x86_64-linux-gnu/libX11-xcb.so.1.0.0
+7f6764000000-7f6764021000 rw-p 00000000 00:00 0 
+7f6764021000-7f6768000000 ---p 00000000 00:00 0 
+7f6768000000-7f676965b000 rw-p 00000000 00:00 0 
+7f676965b000-7f676c000000 ---p 00000000 00:00 0 
+7f676c000000-7f676e0fd000 rw-p 00000000 00:00 0 
+7f676e0fd000-7f6770000000 ---p 00000000 00:00 0 
+7f6770000000-7f6770317000 rw-p 00000000 00:00 0 
+7f6770317000-7f6774000000 ---p 00000000 00:00 0 
+7f6774000000-7f677404a000 rw-p 00000000 00:00 0 
+7f677404a000-7f6778000000 ---p 00000000 00:00 0 
+7f6778000000-7f6778021000 rw-p 00000000 00:00 0 
+7f6778021000-7f677c000000 ---p 00000000 00:00 0 
+7f677c000000-7f677c032000 rw-p 00000000 00:00 0 
+7f677c032000-7f6780000000 ---p 00000000 00:00 0 
+7f6780000000-7f6780072000 rw-p 00000000 00:00 0 
+7f6780072000-7f6784000000 ---p 00000000 00:00 0 
+7f6784000000-7f6784021000 rw-p 00000000 00:00 0 
+7f6784021000-7f6788000000 ---p 00000000 00:00 0 
+7f678806b000-7f678806e000 ---p 00000000 00:00 0 
+7f678806e000-7f678816c000 rw-p 00000000 00:00 0                          [stack:30003]
+7f678816c000-7f678816e000 r-xp 00000000 08:01 271675                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f678816e000-7f678836d000 ---p 00002000 08:01 271675                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f678836d000-7f678836e000 r--p 00001000 08:01 271675                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f678836e000-7f678836f000 rw-p 00002000 08:01 271675                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f678836f000-7f6788394000 r-xp 00000000 08:01 267352                     /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7f6788394000-7f6788593000 ---p 00025000 08:01 267352                     /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7f6788593000-7f6788596000 r--p 00024000 08:01 267352                     /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7f6788596000-7f6788597000 rw-p 00027000 08:01 267352                     /usr/lib/x86_64-linux-gnu/libglapi.so.0.0.0
+7f6788597000-7f6788598000 rw-p 00000000 00:00 0 
+7f6788598000-7f67885be000 r-xp 00000000 08:01 397662                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f67885be000-7f67887bd000 ---p 00026000 08:01 397662                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f67887bd000-7f67887c0000 r--p 00025000 08:01 397662                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f67887c0000-7f67887c1000 rw-p 00028000 08:01 397662                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f67887c1000-7f6788857000 r-xp 00000000 08:01 786597                     /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0
+7f6788857000-7f6788a56000 ---p 00096000 08:01 786597                     /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0
+7f6788a56000-7f6788a59000 r--p 00095000 08:01 786597                     /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0
+7f6788a59000-7f6788a5a000 rw-p 00098000 08:01 786597                     /usr/lib/x86_64-linux-gnu/mesa/libGL.so.1.2.0
+7f6788a5a000-7f6788a5b000 rw-p 00000000 00:00 0 
+7f6788a5b000-7f6788a62000 r-xp 00000000 08:01 412851                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libnativewindow_x11.so
+7f6788a62000-7f6788c61000 ---p 00007000 08:01 412851                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libnativewindow_x11.so
+7f6788c61000-7f6788c62000 rw-p 00006000 08:01 412851                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libnativewindow_x11.so
+7f6788c62000-7f6788c66000 r-xp 00000000 08:01 271717                     /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7f6788c66000-7f6788e66000 ---p 00004000 08:01 271717                     /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7f6788e66000-7f6788e67000 r--p 00004000 08:01 271717                     /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7f6788e67000-7f6788e68000 rw-p 00005000 08:01 271717                     /usr/lib/x86_64-linux-gnu/libXxf86vm.so.1.0.0
+7f6788e68000-7f6788e6a000 r-xp 00000000 08:01 412850                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libnativewindow_awt.so
+7f6788e6a000-7f6789069000 ---p 00002000 08:01 412850                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libnativewindow_awt.so
+7f6789069000-7f678906a000 rw-p 00001000 08:01 412850                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libnativewindow_awt.so
+7f678906a000-7f678906b000 r-xp 00000000 08:02 21003638                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjawt.so
+7f678906b000-7f678926a000 ---p 00001000 08:02 21003638                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjawt.so
+7f678926a000-7f678926b000 rw-p 00000000 08:02 21003638                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjawt.so
+7f678926b000-7f678926d000 r-xp 00000000 08:01 412847                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libgluegen-rt.so
+7f678926d000-7f678946d000 ---p 00002000 08:01 412847                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libgluegen-rt.so
+7f678946d000-7f678946e000 rw-p 00002000 08:01 412847                     /tmp/jogamp_0000/file_cache/jln2987530371951417771/jln7843485904053397995/libgluegen-rt.so
+7f678946e000-7f6789470000 r--s 00000000 08:02 20974584                   /home/nikola/.cache/fontconfig/20d4305be04197b5b0d565d2adfd47ba-le64.cache-4
+7f6789470000-7f6789471000 r--s 00000000 08:02 20974583                   /home/nikola/.cache/fontconfig/0cced9430553798be2433ed444bfde47-le64.cache-4
+7f6789471000-7f6789473000 r--s 00000000 08:02 20974582                   /home/nikola/.cache/fontconfig/3f84587ec3ec25017e466958c261353e-le64.cache-4
+7f6789473000-7f6789475000 r--s 00000000 08:02 20974581                   /home/nikola/.cache/fontconfig/292d27ed61d460de51bd1428d930b887-le64.cache-4
+7f6789475000-7f6789476000 r--s 00000000 08:02 20974578                   /home/nikola/.cache/fontconfig/e9f470794afc3ea0847e94352760e8c9-le64.cache-4
+7f6789476000-7f6789478000 r--s 00000000 08:02 20974576                   /home/nikola/.cache/fontconfig/6158ff713ec80e907a7f5132296fb179-le64.cache-4
+7f6789478000-7f678947a000 r--s 00000000 08:02 20974574                   /home/nikola/.cache/fontconfig/8746bf70a491837c8c2117d0c00a3fdd-le64.cache-4
+7f678947a000-7f678947c000 r--s 00000000 08:02 20974572                   /home/nikola/.cache/fontconfig/18abdd219f151a2f735f675e5eb08f17-le64.cache-4
+7f678947c000-7f6789480000 r--s 00000000 08:02 20977930                   /home/nikola/.cache/fontconfig/b9ff8f979649cd837f749d28211640b5-le64.cache-4
+7f6789480000-7f6789484000 r--s 00000000 08:02 20977927                   /home/nikola/.cache/fontconfig/981bdfd900ba720b208c82b0a67ff8ba-le64.cache-4
+7f6789484000-7f6789488000 r--s 00000000 08:02 20977924                   /home/nikola/.cache/fontconfig/e8e99664dcf5415bb62ac3614bc3437b-le64.cache-4
+7f6789488000-7f678948c000 r--s 00000000 08:02 20977922                   /home/nikola/.cache/fontconfig/8e9fbbaca769ea7928086f4a58d045be-le64.cache-4
+7f678948c000-7f6789490000 r--s 00000000 08:02 20977919                   /home/nikola/.cache/fontconfig/34b24b9410453fb91eb8bc6501f6baa5-le64.cache-4
+7f6789490000-7f6789494000 r--s 00000000 08:02 20977916                   /home/nikola/.cache/fontconfig/6e8962239b80ee6a50a104af8302b936-le64.cache-4
+7f6789494000-7f6789498000 r--s 00000000 08:02 20977914                   /home/nikola/.cache/fontconfig/8edbf5f039e063f0a7f930eb5c2fbf6a-le64.cache-4
+7f6789498000-7f678949c000 r--s 00000000 08:02 20977911                   /home/nikola/.cache/fontconfig/47f8e36a358a589baf57467056b6815a-le64.cache-4
+7f678949c000-7f67894a0000 r--s 00000000 08:02 20977908                   /home/nikola/.cache/fontconfig/9bcfd92c820630a360662f180575f3c2-le64.cache-4
+7f67894a0000-7f67894a4000 r--s 00000000 08:02 20977906                   /home/nikola/.cache/fontconfig/98e0c091bde7fb3e365a85f1f9e8cbf8-le64.cache-4
+7f67894a4000-7f67894a8000 r--s 00000000 08:02 20977902                   /home/nikola/.cache/fontconfig/13f914d319f99889fe9890ba0c2ec989-le64.cache-4
+7f67894a8000-7f67894ac000 r--s 00000000 08:02 20976460                   /home/nikola/.cache/fontconfig/8f63b390051ff664c0ac0aba217850a6-le64.cache-4
+7f67894ac000-7f67894b0000 r--s 00000000 08:02 20976438                   /home/nikola/.cache/fontconfig/4754d6eceba0918ba973626f7d6a9666-le64.cache-4
+7f67894b0000-7f67894b4000 r--s 00000000 08:02 20976426                   /home/nikola/.cache/fontconfig/7e972578272344c65493e7e58e9ee5f9-le64.cache-4
+7f67894b4000-7f67894b8000 r--s 00000000 08:02 20976412                   /home/nikola/.cache/fontconfig/68db6ce64a67584297c4ef157bbded55-le64.cache-4
+7f67894b8000-7f67894bc000 r--s 00000000 08:02 20976393                   /home/nikola/.cache/fontconfig/70ed9ae8b9a7bf398b2f4a7d4ed0c930-le64.cache-4
+7f67894bc000-7f67894c0000 r--s 00000000 08:02 20976383                   /home/nikola/.cache/fontconfig/31c1df9126dd8824dc40201c7c56b480-le64.cache-4
+7f67894c0000-7f67894c4000 r--s 00000000 08:02 20976367                   /home/nikola/.cache/fontconfig/de8c0a35ba468f4f54b4882af8e6fb0f-le64.cache-4
+7f67894c4000-7f67894c8000 r--s 00000000 08:02 20976271                   /home/nikola/.cache/fontconfig/3a9ea86e6fb5fa54ff80d290e0802de8-le64.cache-4
+7f67894c8000-7f67894cc000 r--s 00000000 08:02 20976260                   /home/nikola/.cache/fontconfig/aafd0378c79813b661beb0e0530d1992-le64.cache-4
+7f67894cc000-7f67894d0000 r--s 00000000 08:02 20976259                   /home/nikola/.cache/fontconfig/8f3a66420083ef750e141df872a617d4-le64.cache-4
+7f67894d0000-7f67894d4000 r--s 00000000 08:02 20976253                   /home/nikola/.cache/fontconfig/b15ac786b63298fd74b12a8ec7938ad0-le64.cache-4
+7f67894d4000-7f67894d8000 r--s 00000000 08:02 20976251                   /home/nikola/.cache/fontconfig/bff29056164db354e38372eabfdf95fe-le64.cache-4
+7f67894d8000-7f67894dc000 r--s 00000000 08:02 20976243                   /home/nikola/.cache/fontconfig/2e790af70bb070d42b60f24c30c660d8-le64.cache-4
+7f67894dc000-7f67894e1000 r--s 00000000 08:02 20974564                   /home/nikola/.cache/fontconfig/5b1c599685e41d265005d50f5f522600-le64.cache-4
+7f67894e1000-7f67894e7000 r--s 00000000 08:02 20974554                   /home/nikola/.cache/fontconfig/1f76f35d9eaacae479dc4dfd4ddd199f-le64.cache-4
+7f67894e7000-7f67894f5000 r--s 00000000 08:02 20976174                   /home/nikola/.cache/fontconfig/800a4d11404861d449c38731ed9506c2-le64.cache-4
+7f67894f5000-7f67894f8000 r--s 00000000 08:02 20976157                   /home/nikola/.cache/fontconfig/16278fd863d74f85660c5d52fb1e0c27-le64.cache-4
+7f67894f8000-7f6789506000 r--s 00000000 08:02 20976154                   /home/nikola/.cache/fontconfig/84aaa2d4d36a14a361217e2831feae6e-le64.cache-4
+7f6789506000-7f6789510000 r--s 00000000 08:02 20976134                   /home/nikola/.cache/fontconfig/52f3c665b42db26b1aae0de1afedd301-le64.cache-4
+7f6789510000-7f6789518000 r--s 00000000 08:02 20976125                   /home/nikola/.cache/fontconfig/d5d7cb51b041a6c2bdad8cad4fd08e42-le64.cache-4
+7f6789518000-7f6789522000 r--s 00000000 08:02 20976112                   /home/nikola/.cache/fontconfig/9478d3b47c7b34cfb8f7b0a4ea719fb6-le64.cache-4
+7f6789522000-7f6789528000 r--s 00000000 08:02 20975213                   /home/nikola/.cache/fontconfig/c1edac92150316c6821c65d189a6c290-le64.cache-4
+7f6789528000-7f678952e000 r--s 00000000 08:02 20975208                   /home/nikola/.cache/fontconfig/c04a8bd2d4f33641e46639ae752a6d82-le64.cache-4
+7f678952e000-7f6789534000 r--s 00000000 08:02 20975202                   /home/nikola/.cache/fontconfig/149ae886d848f504d20a4055afd509f8-le64.cache-4
+7f6789534000-7f678953f000 r--s 00000000 08:02 20975197                   /home/nikola/.cache/fontconfig/1f5aa8f17824cd73a364715e8e8440bd-le64.cache-4
+7f678953f000-7f6789545000 r--s 00000000 08:02 20975184                   /home/nikola/.cache/fontconfig/eea59d9e65d392fc49b1d92c08d9564b-le64.cache-4
+7f6789545000-7f678954b000 r--s 00000000 08:02 20975178                   /home/nikola/.cache/fontconfig/48c41627b64f03589b56d182177d576e-le64.cache-4
+7f678954b000-7f6789552000 r--s 00000000 08:02 20976101                   /home/nikola/.cache/fontconfig/66fee57025185a37c4abbd44c0d94f7e-le64.cache-4
+7f6789552000-7f678955d000 r--s 00000000 08:02 20976088                   /home/nikola/.cache/fontconfig/1480850ea01f848b21233f37617c74ac-le64.cache-4
+7f678955d000-7f6789561000 r--s 00000000 08:02 20976075                   /home/nikola/.cache/fontconfig/bf5d986cc06198ec8ec9433ff9097c9b-le64.cache-4
+7f6789561000-7f678956b000 r--s 00000000 08:02 20976072                   /home/nikola/.cache/fontconfig/2cbbfceb43a8463d9189a3b55ec8dddb-le64.cache-4
+7f678956b000-7f678957f000 r--s 00000000 08:02 20976065                   /home/nikola/.cache/fontconfig/62cfd93aa602a3776216bdec47d1cc04-le64.cache-4
+7f678957f000-7f6789590000 r--s 00000000 08:02 20976254                   /home/nikola/.cache/fontconfig/0e19384ed8683f77866734385faaa8cd-le64.cache-4
+7f6789590000-7f67895a2000 r--s 00000000 08:02 20977899                   /home/nikola/.cache/fontconfig/7f7ebd5cce41853386689457b334346e-le64.cache-4
+7f67895a2000-7f67895b4000 r--s 00000000 08:02 20977890                   /home/nikola/.cache/fontconfig/61672da5a4975f9784451b0393746840-le64.cache-4
+7f67895b4000-7f67895c8000 r--s 00000000 08:02 20978538                   /home/nikola/.cache/fontconfig/d22afe4c5b411f571d7479950018acc8-le64.cache-4
+7f67895c8000-7f67895ca000 r--s 00000000 08:02 20978525                   /home/nikola/.cache/fontconfig/51a4b8a93aeac9b14567dc98d723f0b3-le64.cache-4
+7f67895ca000-7f67895d1000 r--s 00000000 08:02 20978523                   /home/nikola/.cache/fontconfig/85485c1fae1ab6662c7fd420b4feef78-le64.cache-4
+7f67895d1000-7f67895e5000 r--s 00000000 08:02 20978518                   /home/nikola/.cache/fontconfig/b22aefe302717af1599f7056dabeeca9-le64.cache-4
+7f67895e5000-7f67895ec000 r--s 00000000 08:02 20978506                   /home/nikola/.cache/fontconfig/7958c142729c42df80defc37de72741e-le64.cache-4
+7f67895ec000-7f6789600000 r--s 00000000 08:02 20978501                   /home/nikola/.cache/fontconfig/b83bc17a0713a0b73cc1118ffb7c30af-le64.cache-4
+7f6789600000-7f6789601000 r--s 00000000 08:02 20991980                   /home/nikola/.cache/fontconfig/e6b6e0e2bf2d0251ff1d1cc5b9506f68-le64.cache-4
+7f6789601000-7f6789604000 r--s 00000000 08:02 20991809                   /home/nikola/.cache/fontconfig/9bf56ec3dff3ff639b260cd4e9c13a09-le64.cache-4
+7f6789604000-7f6789607000 r--s 00000000 08:02 20991808                   /home/nikola/.cache/fontconfig/6f49226c12b3e1324905aafa24af9450-le64.cache-4
+7f6789607000-7f678960a000 r--s 00000000 08:02 20991807                   /home/nikola/.cache/fontconfig/75f4f5e88432e495fd1a16d7f8e86b9b-le64.cache-4
+7f678960a000-7f678960d000 r--s 00000000 08:02 20991806                   /home/nikola/.cache/fontconfig/5ae227913af697aa91b4b6891a48a18a-le64.cache-4
+7f678960d000-7f6789611000 r--s 00000000 08:02 20977872                   /home/nikola/.cache/fontconfig/56252883101888cacd08ef1181abb6c2-le64.cache-4
+7f6789611000-7f6789615000 r--s 00000000 08:02 20974548                   /home/nikola/.cache/fontconfig/313ab732c56b0dc950f7238f7044397f-le64.cache-4
+7f6789615000-7f6789626000 r--s 00000000 08:02 20977868                   /home/nikola/.cache/fontconfig/04717c21a14a648e66dc364962a5d6fd-le64.cache-4
+7f6789626000-7f678962c000 r--s 00000000 08:02 20978094                   /home/nikola/.cache/fontconfig/5fcf4edb401a546b20f6f30c64d524a9-le64.cache-4
+7f678962c000-7f678962d000 r--s 00000000 08:02 20978231                   /home/nikola/.cache/fontconfig/9fe57dd2894a15edd4b3cb17022b0a2c-le64.cache-4
+7f678962d000-7f678962e000 r--s 00000000 08:02 20974542                   /home/nikola/.cache/fontconfig/c2d758ed509d76107accbd6eba33cc5b-le64.cache-4
+7f678962e000-7f6789634000 r--s 00000000 08:02 20977859                   /home/nikola/.cache/fontconfig/c81ca72be724d90eef9915b53da7db4d-le64.cache-4
+7f6789634000-7f6789637000 r--s 00000000 08:02 20974766                   /home/nikola/.cache/fontconfig/b7b82a3ee7930cc5c03463b98dd135e3-le64.cache-4
+7f6789637000-7f678963c000 r--s 00000000 08:02 20978489                   /home/nikola/.cache/fontconfig/38af42409d10ec2886d190c3aa7f682d-le64.cache-4
+7f678963c000-7f6789642000 r--s 00000000 08:02 20977854                   /home/nikola/.cache/fontconfig/e5a20cdcc1076d93ea18ee6b6d69a4e6-le64.cache-4
+7f6789642000-7f6789648000 r--s 00000000 08:02 20974533                   /home/nikola/.cache/fontconfig/bfe8cad363eb409424a4848883b34216-le64.cache-4
+7f6789648000-7f678964a000 r--s 00000000 08:02 20977849                   /home/nikola/.cache/fontconfig/97e31753c6efe6999adfc669bd66a179-le64.cache-4
+7f678964a000-7f6789652000 r--s 00000000 08:02 20974528                   /home/nikola/.cache/fontconfig/e8ea448e3e1572913757af7618ef41d4-le64.cache-4
+7f6789652000-7f6789656000 r--s 00000000 08:02 20978486                   /home/nikola/.cache/fontconfig/400634b797ed08a710b785ba2cb9af9d-le64.cache-4
+7f6789656000-7f678965d000 r--s 00000000 08:02 20978229                   /home/nikola/.cache/fontconfig/65e6acabcaa8b34c6b3b9d63ec5da309-le64.cache-4
+7f678965d000-7f678965f000 r--s 00000000 08:02 20974762                   /home/nikola/.cache/fontconfig/3bb82b2f37b0dec27f8d4bf4ac16f21a-le64.cache-4
+7f678965f000-7f6789663000 r--s 00000000 08:02 20977847                   /home/nikola/.cache/fontconfig/37393638d50d1500b0ab6ad359e981eb-le64.cache-4
+7f6789663000-7f6789666000 r--s 00000000 08:02 20978087                   /home/nikola/.cache/fontconfig/5bc736db3438541b4fc3c14f38d4686b-le64.cache-4
+7f6789666000-7f6789671000 r--s 00000000 08:02 20974757                   /home/nikola/.cache/fontconfig/8155159385045e45a0a92b0e1653a8c8-le64.cache-4
+7f6789671000-7f6789673000 r--s 00000000 08:02 20978077                   /home/nikola/.cache/fontconfig/61015af788eb2387851f2cfe5a40bfcb-le64.cache-4
+7f6789673000-7f6789674000 r--s 00000000 08:02 20975170                   /home/nikola/.cache/fontconfig/34af5f4b63197dc8af3a9e4fa70b9369-le64.cache-4
+7f6789674000-7f67896d5000 r--s 00000000 08:02 20977843                   /home/nikola/.cache/fontconfig/24cbcf2df8ee1fe8ede90fd4fa1f2f34-le64.cache-4
+7f67896d5000-7f67896d6000 r--s 00000000 08:02 20979225                   /home/nikola/.cache/fontconfig/afa480c5fae2b000a680270e1b0569de-le64.cache-4
+7f67896d6000-7f67896d8000 r--s 00000000 08:02 20974516                   /home/nikola/.cache/fontconfig/338b35f2726dc0207bdb55b72d147614-le64.cache-4
+7f67896d8000-7f67896d9000 r--s 00000000 08:02 20978072                   /home/nikola/.cache/fontconfig/dcecbf9245311f367a08b4685f54ede8-le64.cache-4
+7f67896d9000-7f67896dd000 r--s 00000000 08:02 20975004                   /home/nikola/.cache/fontconfig/058295276454950de7666ee8439073a7-le64.cache-4
+7f67896dd000-7f6789701000 r--s 00000000 08:02 20973803                   /home/nikola/.cache/fontconfig/e09355651b94f6d7147a1fa8d0daca33-le64.cache-4
+7f6789701000-7f6789704000 r--s 00000000 08:02 20979224                   /home/nikola/.cache/fontconfig/1fcf8551e1a023aeb234fd4e81abfd3c-le64.cache-4
+7f6789704000-7f6789734000 r--s 00000000 08:02 20977790                   /home/nikola/.cache/fontconfig/a8ef733914d66cdb621cd270b405b4a5-le64.cache-4
+7f6789734000-7f6789736000 r--s 00000000 08:02 20977762                   /home/nikola/.cache/fontconfig/27ca96a268d8fa7527fce286babb0488-le64.cache-4
+7f6789736000-7f6789743000 r--s 00000000 08:02 20974494                   /home/nikola/.cache/fontconfig/29323045af4a09a17ac31f6e5908670a-le64.cache-4
+7f6789743000-7f6789745000 r--s 00000000 08:02 20978224                   /home/nikola/.cache/fontconfig/f360365e1787a6082dc0309a678252fa-le64.cache-4
+7f6789745000-7f6789747000 r--s 00000000 08:02 20977760                   /home/nikola/.cache/fontconfig/c1443621e652826e86226166710b8ce4-le64.cache-4
+7f6789747000-7f6789754000 r--s 00000000 08:02 20977757                   /home/nikola/.cache/fontconfig/59824846b563eb38cb1178b1381932b6-le64.cache-4
+7f6789754000-7f6789757000 r--s 00000000 08:02 20975150                   /home/nikola/.cache/fontconfig/7a7d8799ce7cc94153bef3d7e39eaa39-le64.cache-4
+7f6789757000-7f678975b000 r--s 00000000 08:02 20977748                   /home/nikola/.cache/fontconfig/e6951f60aa29edaa1ef92a8c341fa069-le64.cache-4
+7f678975b000-7f6789764000 r--s 00000000 08:02 20974477                   /home/nikola/.cache/fontconfig/0b9fdce692e8e82fe88dab1f77265207-le64.cache-4
+7f6789764000-7f678976a000 r--s 00000000 08:02 20978482                   /home/nikola/.cache/fontconfig/07ad5a25e17f2d0f3dc544180227a4e0-le64.cache-4
+7f678976a000-7f6789773000 r--s 00000000 08:02 20977743                   /home/nikola/.cache/fontconfig/cf5b38dfc3e3cc79307367a10e55c75a-le64.cache-4
+7f6789773000-7f6789778000 r--s 00000000 08:02 20978477                   /home/nikola/.cache/fontconfig/3a6a61ad5726693284ae205ac5ba8810-le64.cache-4
+7f6789778000-7f6789781000 r--s 00000000 08:02 20974953                   /home/nikola/.cache/fontconfig/b2b6e3ff26986f875fc2887f00d58a69-le64.cache-4
+7f6789781000-7f6789784000 r--s 00000000 08:02 20977737                   /home/nikola/.cache/fontconfig/39c430e35d3a6f5cc34ba69bdc43e12b-le64.cache-4
+7f6789784000-7f6789785000 r--s 00000000 08:02 20979223                   /home/nikola/.cache/fontconfig/6e8ea26959d5b61efde63dbc8e2d0434-le64.cache-4
+7f6789785000-7f6789789000 r--s 00000000 08:02 20977730                   /home/nikola/.cache/fontconfig/7a186059e70016d713838ddf3297acff-le64.cache-4
+7f6789789000-7f678978b000 r--s 00000000 08:02 20977727                   /home/nikola/.cache/fontconfig/24665fbbe53b4cd5346ecb15b6cc995d-le64.cache-4
+7f678978b000-7f678978d000 r--s 00000000 08:02 20978222                   /home/nikola/.cache/fontconfig/9e928a3074b85c55f54f6a4722c9d2f8-le64.cache-4
+7f678978d000-7f678978e000 r--s 00000000 08:02 20977725                   /home/nikola/.cache/fontconfig/0a10c81643744d8cea7ba89254a5fe24-le64.cache-4
+7f678978e000-7f6789791000 r--s 00000000 08:02 20974468                   /home/nikola/.cache/fontconfig/cc3ec15a330400ee38eec5e23a675ed5-le64.cache-4
+7f6789791000-7f678979f000 r--s 00000000 08:02 20977724                   /home/nikola/.cache/fontconfig/211d024dcc7c56a6d7be290e92836f65-le64.cache-4
+7f678979f000-7f67897a2000 r--s 00000000 08:02 20977713                   /home/nikola/.cache/fontconfig/4624f3818f0b6f2e953d82934d50b3a0-le64.cache-4
+7f67897a2000-7f67897a6000 r--s 00000000 08:02 20978220                   /home/nikola/.cache/fontconfig/e83904f8dc84dc392c9212786a26cc1d-le64.cache-4
+7f67897a6000-7f67897a9000 r--s 00000000 08:02 20976044                   /home/nikola/.cache/fontconfig/f4eedf80c93c74ea2309e98068a37064-le64.cache-4
+7f67897a9000-7f67897b3000 r--s 00000000 08:02 20978079                   /home/nikola/.cache/fontconfig/5560905f39d956119d459f7607ade294-le64.cache-4
+7f67897b3000-7f67897d5000 r--s 00000000 08:02 20976464                   /home/nikola/.cache/fontconfig/d9d001ede1eec1a769381757ca81adfd-le64.cache-4
+7f67897d5000-7f67897d8000 r--s 00000000 08:02 20977710                   /home/nikola/.cache/fontconfig/a4ab23f0e7a1a432e1ab0e9d7ce8e9aa-le64.cache-4
+7f67897d8000-7f67897dd000 r--s 00000000 08:02 20978218                   /home/nikola/.cache/fontconfig/516d8d406a8710e4384a4d2bd1487ace-le64.cache-4
+7f67897dd000-7f67897e0000 r--s 00000000 08:02 20978057                   /home/nikola/.cache/fontconfig/0dd7542c3ccdb3e6e8f0e4227c77dd01-le64.cache-4
+7f67897e0000-7f67897e3000 r--s 00000000 08:02 20978474                   /home/nikola/.cache/fontconfig/65f7d84d7844527f1e5ccef95706a90c-le64.cache-4
+7f67897e3000-7f6789802000 r--s 00000000 08:02 20978213                   /home/nikola/.cache/fontconfig/5483cee5fad6bc792d847640c1a449cb-le64.cache-4
+7f6789802000-7f6789807000 r--s 00000000 08:02 20977705                   /home/nikola/.cache/fontconfig/7e0bcae2a896a3a7d015242e3fea7c22-le64.cache-4
+7f6789807000-7f678980e000 r--s 00000000 08:02 20978196                   /home/nikola/.cache/fontconfig/99f6a91140863f5b24156f6954e1fe8f-le64.cache-4
+7f678980e000-7f678981f000 r--s 00000000 08:02 20974930                   /home/nikola/.cache/fontconfig/15692453c6d58aaaba99e8c6f6a4c358-le64.cache-4
+7f678981f000-7f678983a000 r--s 00000000 08:02 20974745                   /home/nikola/.cache/fontconfig/0ae2e80b7c26ffa9e2403d3575017511-le64.cache-4
+7f678983a000-7f678984d000 r--s 00000000 08:02 20974820                   /home/nikola/.cache/fontconfig/3e17a34f647105f72cae2e939630e565-le64.cache-4
+7f678984d000-7f6789856000 r--s 00000000 08:02 20978472                   /home/nikola/.cache/fontconfig/90a5af4695f6dddb303a3b5cebdabf6b-le64.cache-4
+7f6789856000-7f6789858000 r--s 00000000 08:02 20974466                   /home/nikola/.cache/fontconfig/4189490cef8590f08128b697a7d83448-le64.cache-4
+7f6789858000-7f678985e000 r--s 00000000 08:02 20974462                   /home/nikola/.cache/fontconfig/b00f9135ec54970e65bce494da336747-le64.cache-4
+7f678985e000-7f6789860000 r--s 00000000 08:02 20978192                   /home/nikola/.cache/fontconfig/e4c2b2cac34a76d1d2802cccc15831eb-le64.cache-4
+7f6789860000-7f6789868000 r--s 00000000 08:02 20978063                   /home/nikola/.cache/fontconfig/5f0b095d0e1f54583f6752d5ea47b43b-le64.cache-4
+7f6789868000-7f6789871000 r--s 00000000 08:02 20978052                   /home/nikola/.cache/fontconfig/0451f69f44bc193e599af400737fa5be-le64.cache-4
+7f6789871000-7f6789872000 r--s 00000000 08:02 20978189                   /home/nikola/.cache/fontconfig/717c5c486d47fb406c717044cbd0be9a-le64.cache-4
+7f6789872000-7f6789879000 r--s 00000000 08:02 20978047                   /home/nikola/.cache/fontconfig/10346a47e6cb925caed01d534cbd027d-le64.cache-4
+7f6789879000-7f678987d000 r--s 00000000 08:02 20977702                   /home/nikola/.cache/fontconfig/58f58f04fe1ff8578d6d5dfa819dc718-le64.cache-4
+7f678987d000-7f678989b000 r--s 00000000 08:02 20979222                   /home/nikola/.cache/fontconfig/12caf0dd875415be717974245a1e294b-le64.cache-4
+7f678989b000-7f67898a0000 r--s 00000000 08:02 20978188                   /home/nikola/.cache/fontconfig/cbb8aee1797ae5f62d6f6036f06a1868-le64.cache-4
+7f67898a0000-7f67898a2000 r--s 00000000 08:02 20979221                   /home/nikola/.cache/fontconfig/86aeace3b9f6c52162623cc1dade61aa-le64.cache-4
+7f67898a2000-7f67898a6000 r--s 00000000 08:02 20978180                   /home/nikola/.cache/fontconfig/457c7ed6c9d8de387aa3e28bbaec1090-le64.cache-4
+7f67898a6000-7f67898c3000 r--s 00000000 08:02 20979220                   /home/nikola/.cache/fontconfig/e31c990982ba150993546492f4583c89-le64.cache-4
+7f67898c3000-7f67898c7000 r--s 00000000 08:02 20977696                   /home/nikola/.cache/fontconfig/456030f53c5edd67d5ad3c1c5b5d6539-le64.cache-4
+7f67898c7000-7f67898d0000 r--s 00000000 08:02 20978040                   /home/nikola/.cache/fontconfig/418aae713f168c7a002e896579371988-le64.cache-4
+7f67898d0000-7f67898d5000 r--s 00000000 08:02 20978177                   /home/nikola/.cache/fontconfig/bad481604561179e8f6cbac10df740fc-le64.cache-4
+7f67898d5000-7f67898d6000 r--s 00000000 08:02 20978172                   /home/nikola/.cache/fontconfig/5f1b9c3cea5f178651c41695dd9f21bc-le64.cache-4
+7f67898d6000-7f67898e2000 r--s 00000000 08:02 20979219                   /home/nikola/.cache/fontconfig/4be26408a46869727fd3dcbc0529e533-le64.cache-4
+7f67898e2000-7f67898eb000 r--s 00000000 08:02 20973482                   /home/nikola/.cache/fontconfig/9f8814949e578f1ea9a27039e90b209e-le64.cache-4
+7f67898eb000-7f67898ef000 r--s 00000000 08:02 20978170                   /home/nikola/.cache/fontconfig/63c1192a3b865be1af92c34dd17a158b-le64.cache-4
+7f67898ef000-7f6789900000 r--s 00000000 08:02 20977691                   /home/nikola/.cache/fontconfig/ed0180d11563303f707c897dc2ea5e1c-le64.cache-4
+7f6789900000-7f6789904000 r--s 00000000 08:02 20978460                   /home/nikola/.cache/fontconfig/58d52db611667725407e0d1105aba5f4-le64.cache-4
+7f6789904000-7f678990d000 r--s 00000000 08:02 20978032                   /home/nikola/.cache/fontconfig/894b5fd4ce11ed5f6399ede9d2136573-le64.cache-4
+7f678990d000-7f6789915000 r--s 00000000 08:02 20977681                   /home/nikola/.cache/fontconfig/656b0be47a6dfa2bfb3b424ae700e810-le64.cache-4
+7f6789915000-7f678991b000 r--s 00000000 08:02 20978024                   /home/nikola/.cache/fontconfig/19333206ba3bf9ccf353cbe3d6901700-le64.cache-4
+7f678991b000-7f678992a000 r--s 00000000 08:02 20974467                   /home/nikola/.cache/fontconfig/e75e63349a5de24757f7dd5a9f51d0e3-le64.cache-4
+7f678992a000-7f6789948000 r--s 00000000 08:02 20978163                   /home/nikola/.cache/fontconfig/fe9a05b9919686f20813d02818b1cdef-le64.cache-4
+7f6789948000-7f678994a000 r--s 00000000 08:02 20991805                   /home/nikola/.cache/fontconfig/1c720542a66331cf5efebcdb3588f108-le64.cache-4
+7f678994a000-7f678994c000 r--s 00000000 08:02 20991804                   /home/nikola/.cache/fontconfig/1ea487807d4af4c7175f555e48a9845e-le64.cache-4
+7f678994c000-7f678994e000 r--s 00000000 08:02 20991803                   /home/nikola/.cache/fontconfig/594c81b2da34b9649ff6c5fa9382e4be-le64.cache-4
+7f678994e000-7f6789950000 r--s 00000000 08:02 20991802                   /home/nikola/.cache/fontconfig/63b668740a1cba8aa001f90b2c896ace-le64.cache-4
+7f6789950000-7f6789960000 r--s 00000000 08:02 20974376                   /home/nikola/.cache/fontconfig/650cdd11ff3ab0d52a73483fe7da9af8-le64.cache-4
+7f6789960000-7f6789970000 r--s 00000000 08:02 20974369                   /home/nikola/.cache/fontconfig/409ec13480f1df0081ad86bfeb6674af-le64.cache-4
+7f6789970000-7f6789980000 r--s 00000000 08:02 20974311                   /home/nikola/.cache/fontconfig/2b74a974c0ab819e7ce76abe19cc2516-le64.cache-4
+7f6789980000-7f6789987000 r--s 00000000 08:02 20974157                   /home/nikola/.cache/fontconfig/e721117837f5968f9ef5463bf806ddd5-le64.cache-4
+7f6789987000-7f678998d000 r--s 00000000 08:02 20973759                   /home/nikola/.cache/fontconfig/f1daf04057f281b3fd5072bd6cd29555-le64.cache-4
+7f678998d000-7f6789994000 r--s 00000000 08:02 20973711                   /home/nikola/.cache/fontconfig/ae6b7ddb77526609604c050dbb07ccf5-le64.cache-4
+7f6789994000-7f678999b000 r--s 00000000 08:02 20973668                   /home/nikola/.cache/fontconfig/49c53f5f11ad6d367a1d7dd152dc5788-le64.cache-4
+7f678999b000-7f67899a7000 r--s 00000000 08:02 20973586                   /home/nikola/.cache/fontconfig/8d5c4462f7dd07f31f611e8881834e1c-le64.cache-4
+7f67899a7000-7f67899ac000 r--s 00000000 08:02 20973553                   /home/nikola/.cache/fontconfig/9d935c8f712b6a3a80015f3840495066-le64.cache-4
+7f67899ac000-7f67899c6000 r--s 00000000 08:02 20979218                   /home/nikola/.cache/fontconfig/a613768886808d810d4815ff7910d85f-le64.cache-4
+7f67899c6000-7f67899d3000 r--s 00000000 08:02 20979217                   /home/nikola/.cache/fontconfig/ae094abb76acc0884209d98df5bed7ee-le64.cache-4
+7f67899d3000-7f67899d4000 r--s 00000000 08:02 20979216                   /home/nikola/.cache/fontconfig/e41c7bd39a9a0a2d2a5df67a522da966-le64.cache-4
+7f67899d4000-7f67899d5000 r--s 00000000 08:02 20979215                   /home/nikola/.cache/fontconfig/96f414e221049ba00b49c9db3013c435-le64.cache-4
+7f67899d5000-7f67899d9000 r--s 00000000 08:02 20991787                   /home/nikola/.cache/fontconfig/4aeb8d822ace06f23280808ce6c00564-le64.cache-4
+7f67899d9000-7f67899dd000 r--s 00000000 08:02 20991786                   /home/nikola/.cache/fontconfig/2ea8c2d3e2ce6e4b6996a93107b03bf4-le64.cache-4
+7f67899dd000-7f67899e1000 r--s 00000000 08:02 20991785                   /home/nikola/.cache/fontconfig/80da1d2b439db8e3bb7a827f7d4c1c34-le64.cache-4
+7f67899e1000-7f67899e5000 r--s 00000000 08:02 20991784                   /home/nikola/.cache/fontconfig/87a5bceedefe60d06a64cc50b7a5550f-le64.cache-4
+7f67899e5000-7f67899e6000 r--s 00000000 08:01 535080                     /var/cache/fontconfig/c05880de57d1f5e948fdfacc138775d9-le64.cache-4
+7f67899e6000-7f67899f1000 r--s 00000000 08:01 535073                     /var/cache/fontconfig/945677eb7aeaf62f1d50efc3fb3ec7d8-le64.cache-4
+7f67899f1000-7f67899f7000 r--s 00000000 08:01 535057                     /var/cache/fontconfig/2cd17615ca594fa2959ae173292e504c-le64.cache-4
+7f67899f7000-7f67899f8000 r--s 00000000 08:01 535091                     /var/cache/fontconfig/e7071f4a29fa870f4323321c154eba04-le64.cache-4
+7f67899f8000-7f67899f9000 r--s 00000000 08:01 535054                     /var/cache/fontconfig/0d8c3b2ac0904cb8a57a757ad11a4a08-le64.cache-4
+7f67899f9000-7f6789a00000 r--s 00000000 08:01 535077                     /var/cache/fontconfig/a755afe4a08bf5b97852ceb7400b47bc-le64.cache-4
+7f6789a00000-7f6789a01000 r--s 00000000 08:01 535076                     /var/cache/fontconfig/a6354e3ac43af67bd8d7b8e43c34e49f-le64.cache-4
+7f6789a01000-7f6789a02000 r--s 00000000 08:01 535056                     /var/cache/fontconfig/1ac9eb803944fde146138c791f5cc56a-le64.cache-4
+7f6789a02000-7f6789a06000 r--s 00000000 08:01 535060                     /var/cache/fontconfig/385c0604a188198f04d133e54aba7fe7-le64.cache-4
+7f6789a06000-7f6789a07000 r--s 00000000 08:01 535088                     /var/cache/fontconfig/dc05db6664285cc2f12bf69c139ae4c3-le64.cache-4
+7f6789a07000-7f6789a09000 r--s 00000000 08:01 535070                     /var/cache/fontconfig/767a8244fc0220cfb567a839d0392e0b-le64.cache-4
+7f6789a09000-7f6789a0a000 r--s 00000000 08:01 527287                     /var/cache/fontconfig/4794a0821666d79190d59a36cb4f44b5-le64.cache-4
+7f6789a0a000-7f6789a0f000 r--s 00000000 08:01 535072                     /var/cache/fontconfig/8801497958630a81b71ace7c5f9b32a8-le64.cache-4
+7f6789a0f000-7f6789a4a000 r--s 00000000 08:01 527340                     /var/cache/fontconfig/365b55f210c0a22e9a19e35191240f32-le64.cache-4
+7f6789a4a000-7f6789a4e000 r--s 00000000 08:01 540214                     /var/cache/fontconfig/c57959a16110560c8d0fcea73374aeeb-le64.cache-4
+7f6789a4e000-7f6789a55000 r--s 00000000 08:01 535058                     /var/cache/fontconfig/3047814df9a2f067bd2d96a2b9c36e5a-le64.cache-4
+7f6789a55000-7f6789a56000 r--s 00000000 08:01 535064                     /var/cache/fontconfig/56cf4f4769d0f4abc89a4895d7bd3ae1-le64.cache-4
+7f6789a56000-7f6789a57000 r--s 00000000 08:01 535079                     /var/cache/fontconfig/b9d506c9ac06c20b433354fa67a72993-le64.cache-4
+7f6789a57000-7f6789a5d000 r--s 00000000 08:01 535078                     /var/cache/fontconfig/b47c4e1ecd0709278f4910c18777a504-le64.cache-4
+7f6789a5d000-7f6789a70000 r--s 00000000 08:01 535084                     /var/cache/fontconfig/d52a8644073d54c13679302ca1180695-le64.cache-4
+7f6789a70000-7f6789a79000 r--s 00000000 08:01 535061                     /var/cache/fontconfig/3f7329c5293ffd510edef78f73874cfd-le64.cache-4
+7f6789a79000-7f6789a84000 r--s 00000000 08:01 540946                     /var/cache/fontconfig/d589a48862398ed80a3d6066f4f56f4c-le64.cache-4
+7f6789a84000-7f6789a85000 r--s 00000000 08:01 535053                     /var/cache/fontconfig/0c9eb80ebd1c36541ebe2852d3bb0c49-le64.cache-4
+7f6789a85000-7f6789a9a000 r--s 00000000 08:01 535087                     /var/cache/fontconfig/da82082e1ef13c4097208324d67c180c-le64.cache-4
+7f6789a9a000-7f6789a9b000 r--s 00000000 08:01 535067                     /var/cache/fontconfig/62f91419b9ebdb6975e7e41ab6412357-le64.cache-4
+7f6789a9b000-7f6789a9e000 r--s 00000000 08:01 524417                     /var/cache/fontconfig/e13b20fdb08344e0e664864cc2ede53d-le64.cache-4
+7f6789a9e000-7f6789a9f000 r--s 00000000 08:02 20991757                   /home/nikola/.cache/fontconfig/4b6ae8edb7baea0ea119b175915c7927-le64.cache-4
+7f6789a9f000-7f6789aa3000 r--s 00000000 08:02 20991801                   /home/nikola/.cache/fontconfig/1b589b53415dd2764288f4d093e0d4e3-le64.cache-4
+7f6789aa3000-7f6789aa8000 r--s 00000000 08:02 20991800                   /home/nikola/.cache/fontconfig/e67eb92f673eb9ca8f07727d56bc4b6c-le64.cache-4
+7f6789aa8000-7f6789aa9000 r--s 00000000 08:02 20991799                   /home/nikola/.cache/fontconfig/f453aeb4188c949cec442eccb35782dd-le64.cache-4
+7f6789aa9000-7f6789ab0000 r--s 00000000 08:02 20974305                   /home/nikola/.cache/fontconfig/19530a2b092e57ca552ae1dd52c864f7-le64.cache-4
+7f6789ab0000-7f6789ab1000 r--s 00000000 08:02 20974298                   /home/nikola/.cache/fontconfig/e8a3fea52a60e7edc5aabd75f1039327-le64.cache-4
+7f6789ab1000-7f6789acb000 r--s 00000000 08:02 20974297                   /home/nikola/.cache/fontconfig/1e87f381794ef7f53617ce430ba6a3ff-le64.cache-4
+7f6789acb000-7f6789ad6000 r--s 00000000 08:02 20974287                   /home/nikola/.cache/fontconfig/9163c48a4eb49a71260c224b3a35796a-le64.cache-4
+7f6789ad6000-7f6789add000 r--s 00000000 08:02 20974282                   /home/nikola/.cache/fontconfig/dffc07a445a6c333a545ebf19740d283-le64.cache-4
+7f6789add000-7f6789ae1000 r--s 00000000 08:02 20974277                   /home/nikola/.cache/fontconfig/77bd6148fc57db00ee664436ce7b74f1-le64.cache-4
+7f6789ae1000-7f6789ae8000 r--s 00000000 08:02 20974275                   /home/nikola/.cache/fontconfig/228376e6c81d39958e24fb6cd6cc74a8-le64.cache-4
+7f6789ae8000-7f6789aec000 r--s 00000000 08:02 20974271                   /home/nikola/.cache/fontconfig/40d5867eb7da82a3b29364c7a128b6fb-le64.cache-4
+7f6789aec000-7f6789af9000 r--s 00000000 08:02 20974266                   /home/nikola/.cache/fontconfig/8877f3986f2ed3dd5f89188e560841f6-le64.cache-4
+7f6789af9000-7f6789aff000 r--s 00000000 08:02 20974249                   /home/nikola/.cache/fontconfig/bfa07cba4e6b74bc364ba553a2e0d7b1-le64.cache-4
+7f6789aff000-7f6789b0f000 r--s 00000000 08:02 20974183                   /home/nikola/.cache/fontconfig/943be5afc90586a999a8106a90700681-le64.cache-4
+7f6789b0f000-7f6789b14000 r--s 00000000 08:02 20973543                   /home/nikola/.cache/fontconfig/5e4959fcb3f481bf4506844d5bc94ff2-le64.cache-4
+7f6789b14000-7f6789b18000 r--s 00000000 08:02 20973530                   /home/nikola/.cache/fontconfig/a338d6cf8dc9cbc6fe3d7392e8689ffd-le64.cache-4
+7f6789b18000-7f6789b19000 r--s 00000000 08:02 20973509                   /home/nikola/.cache/fontconfig/e3adfee13a40aace5f998e84e217ba79-le64.cache-4
+7f6789b19000-7f6789b1c000 r--s 00000000 08:02 20991796                   /home/nikola/.cache/fontconfig/38569a00e7c7ff7f420827ada179b8ae-le64.cache-4
+7f6789b1c000-7f6789b20000 r--s 00000000 08:02 20973518                   /home/nikola/.cache/fontconfig/5b6d021da8e2990751f56261e56c1746-le64.cache-4
+7f6789b20000-7f6789b21000 r--s 00000000 08:02 20974241                   /home/nikola/.cache/fontconfig/ecdc62a8dd3e00d92f7a4ec0d601a174-le64.cache-4
+7f6789b21000-7f6789b23000 r--s 00000000 08:02 20973491                   /home/nikola/.cache/fontconfig/1ba7107f7f97ac1a8becded80b114ac4-le64.cache-4
+7f6789b23000-7f6789b25000 r--s 00000000 08:02 20973486                   /home/nikola/.cache/fontconfig/0dc8cfd5c2290ae43978723bdf929da0-le64.cache-4
+7f6789b25000-7f6789b29000 r--s 00000000 08:02 20991818                   /home/nikola/.cache/fontconfig/6aebfd7d0189cf2264bcbb58267c0ce7-le64.cache-4
+7f6789b29000-7f6789b30000 r--s 00000000 08:02 20991782                   /home/nikola/.cache/fontconfig/bed2a157a38ca3d1b6a74d2f5b62e28b-le64.cache-4
+7f6789b30000-7f6789b34000 r--s 00000000 08:02 20991773                   /home/nikola/.cache/fontconfig/b1a0189f40bf8b0174b0bba129b629ec-le64.cache-4
+7f6789b34000-7f6789b38000 r--s 00000000 08:02 20991817                   /home/nikola/.cache/fontconfig/c9e07c16de2fe217253e90827f3c232d-le64.cache-4
+7f6789b38000-7f6789b41000 r--s 00000000 08:02 20973484                   /home/nikola/.cache/fontconfig/1a2277bc25244fc39778d783f92e4265-le64.cache-4
+7f6789b41000-7f6789b46000 r--s 00000000 08:02 20973476                   /home/nikola/.cache/fontconfig/f6dd6ac41c8b66e9ceae1e8bdb6dd5b8-le64.cache-4
+7f6789b46000-7f6789b49000 r--s 00000000 08:02 20974238                   /home/nikola/.cache/fontconfig/dd33da7304f538d34a2982c9a702130b-le64.cache-4
+7f6789b49000-7f6789b4c000 r--s 00000000 08:02 20973448                   /home/nikola/.cache/fontconfig/75eb419c0ad39154abeeaa33946e83fa-le64.cache-4
+7f6789b4c000-7f6789b61000 r--s 00000000 08:02 20973333                   /home/nikola/.cache/fontconfig/87e4e5aaefe101fcd24e1d7baffca8ab-le64.cache-4
+7f6789b61000-7f6789b69000 r--s 00000000 08:02 20973303                   /home/nikola/.cache/fontconfig/8fd0390ec2af3ff3f7bb8ac8935b3786-le64.cache-4
+7f6789b69000-7f6789b7b000 r--s 00000000 08:02 20974229                   /home/nikola/.cache/fontconfig/e4938aedc4ef9e83a79fa9b5f2f4ae97-le64.cache-4
+7f6789b7b000-7f6789b81000 r--s 00000000 08:02 20973298                   /home/nikola/.cache/fontconfig/1a33ef798ba56cc87373bd2e6c8759ca-le64.cache-4
+7f6789b81000-7f6789b89000 r--s 00000000 08:02 20973295                   /home/nikola/.cache/fontconfig/4dbd98bc8cbb82a4ce0d56be8f777084-le64.cache-4
+7f6789b89000-7f6789b91000 r--s 00000000 08:02 20973290                   /home/nikola/.cache/fontconfig/5e1009f30095cdc009731394194e48d4-le64.cache-4
+7f6789b91000-7f6789b9a000 r--s 00000000 08:02 20973282                   /home/nikola/.cache/fontconfig/6aaa2de4a2c04e73a7f34de909eb46e6-le64.cache-4
+7f6789b9a000-7f6789bab000 r--s 00000000 08:02 20973273                   /home/nikola/.cache/fontconfig/da4dac1207c21fc2cefcfd3f3caf18ea-le64.cache-4
+7f6789bab000-7f6789bb3000 r--s 00000000 08:02 20973253                   /home/nikola/.cache/fontconfig/af4ded5c492998bcc3750f9062af65a4-le64.cache-4
+7f6789bb3000-7f6789bb6000 r--s 00000000 08:02 20973245                   /home/nikola/.cache/fontconfig/73e80c930da7d575b275dfb7f90eea94-le64.cache-4
+7f6789bb6000-7f6789bbf000 r--s 00000000 08:02 20973238                   /home/nikola/.cache/fontconfig/3c5c9066a4b9a55dd5654e2e8d24ed0c-le64.cache-4
+7f6789bbf000-7f6789c00000 r--s 00000000 08:02 20992002                   /home/nikola/.cache/fontconfig/0f5f8867a7476de6ca41e5b50c15e921-le64.cache-4
+7f6789c20000-7f6789c88000 r-xp 00000000 08:02 21003657                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libt2k.so
+7f6789c88000-7f6789e88000 ---p 00068000 08:02 21003657                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libt2k.so
+7f6789e88000-7f6789e8f000 rw-p 00068000 08:02 21003657                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libt2k.so
+7f6789e8f000-7f6789e9f000 rw-p 00000000 00:00 0 
+7f6789e9f000-7f6789eba000 r--s 00000000 08:01 1180582                    /usr/share/fonts/type1/gsfonts/p052023l.pfb
+7f6789efe000-7f6789f19000 r--s 00000000 08:01 1180579                    /usr/share/fonts/type1/gsfonts/p052004l.pfb
+7f6789f73000-7f6789f85000 r--s 00000000 08:01 1180543                    /usr/share/fonts/type1/gsfonts/n019044l.pfb
+7f678a010000-7f678a021000 r--s 00000000 08:01 1180546                    /usr/share/fonts/type1/gsfonts/n019063l.pfb
+7f678a0e4000-7f678a0e7000 ---p 00000000 00:00 0 
+7f678a0e7000-7f678a1e5000 rw-p 00000000 00:00 0                          [stack:29999]
+7f678a1e5000-7f678a1ef000 r--s 00000000 08:02 20975284                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Condensed/Corpid Cd Heavy Italic.pfb
+7f678a1fb000-7f678a206000 r--s 00000000 08:02 20975287                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Condensed/Corpid Cd LF Black Italic.pfb
+7f678a206000-7f678a210000 r--s 00000000 08:02 20975299                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Condensed/Corpid Cd.pfb
+7f678a226000-7f678a230000 r--s 00000000 08:02 20975286                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Condensed/Corpid Cd Italic.pfb
+7f678a251000-7f678a25c000 r--s 00000000 08:02 20975293                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Condensed/Corpid Cd LF Italic.pfb
+7f678a290000-7f678a29a000 r--s 00000000 08:02 20975285                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Condensed/Corpid Cd Heavy.pfb
+7f678a2f1000-7f678a2f4000 ---p 00000000 00:00 0 
+7f678a2f4000-7f678a3f2000 rw-p 00000000 00:00 0                          [stack:29997]
+7f678a3f2000-7f678a3fc000 r--s 00000000 08:01 1179861                    /usr/share/fonts/X11/Type1/c0583bt_.pfb
+7f678a448000-7f678a451000 r--s 00250000 08:02 21003577                   /home/nikola/apps/processing-2.2.1/java/lib/resources.jar
+7f678a459000-7f678a461000 rw-s 00000000 00:04 377260                     /drm mm object (deleted)
+7f678a461000-7f678a469000 rw-s 00000000 00:04 377245                     /drm mm object (deleted)
+7f678a469000-7f678a471000 rw-s 00000000 00:04 379274                     /drm mm object (deleted)
+7f678a471000-7f678a479000 rw-s 00000000 00:04 378251                     /drm mm object (deleted)
+7f678a479000-7f678a47c000 ---p 00000000 00:00 0 
+7f678a47c000-7f678a57a000 rw-p 00000000 00:00 0                          [stack:29979]
+7f678a57a000-7f678a57d000 ---p 00000000 00:00 0 
+7f678a57d000-7f678a5b3000 rw-p 00000000 00:00 0 
+7f678a5e3000-7f678a5ea000 r--s 00000000 08:02 20976815                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/97. Agenda     [1993 - Greg Thompson]/AgendaThinUltraCondensed.pfb
+7f678a5ff000-7f678a606000 r--s 00000000 08:02 20976811                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/97. Agenda     [1993 - Greg Thompson]/AgendaMediumCondensed.pfb
+7f678a607000-7f678a60b000 r--s 0007d000 08:02 21003674                   /home/nikola/apps/processing-2.2.1/java/lib/jsse.jar
+7f678a61b000-7f678a622000 r--s 00000000 08:02 20976810                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/97. Agenda     [1993 - Greg Thompson]/AgendaMedium.pfb
+7f678a629000-7f678a630000 r--s 00000000 08:02 20976814                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/97. Agenda     [1993 - Greg Thompson]/AgendaMediumUltraCondensed.pfb
+7f678a630000-7f678a637000 r--s 00000000 08:02 20976809                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/97. Agenda     [1993 - Greg Thompson]/AgendaLightUltraCondensed.pfb
+7f678a63e000-7f678a645000 r--s 00000000 08:02 20976812                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/97. Agenda     [1993 - Greg Thompson]/AgendaMediumExtraCondensed.pfb
+7f678a66e000-7f678a679000 r--s 00000000 08:02 20975171                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Black Italic.pfb
+7f678a69a000-7f678a6a5000 r--s 00000000 08:02 20975176                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Caps Black Italic.pfb
+7f678a6a5000-7f678a6b0000 r--s 00000000 08:02 20975185                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Caps Light Italic.pfb
+7f678a6e7000-7f678a6f2000 r--s 00000000 08:02 20975192                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Light.pfb
+7f678a709000-7f678a714000 r--s 00000000 08:02 20975182                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Caps Heavy.pfb
+7f678a714000-7f678a715000 rw-s 00000000 00:04 379275                     /drm mm object (deleted)
+7f678a715000-7f678a716000 rw-s 00000000 00:04 377253                     /drm mm object (deleted)
+7f678a71f000-7f678a72a000 r--s 00000000 08:02 20975187                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Caps.pfb
+7f678a72a000-7f678a735000 r--s 00000000 08:02 20975186                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Caps Light.pfb
+7f678a735000-7f678a736000 rw-s 00000000 00:04 378257                     /drm mm object (deleted)
+7f678a741000-7f678a74d000 r--s 00000000 08:02 20975189                   /home/nikola/.fonts/The Top 100 Best Fonts of All Time/83. Corpid PS     [1997 - Lucas de Groot]/Regular/Corpid Heavy.pfb
+7f678a74d000-7f678a74e000 r--s 00000000 08:02 20974240                   /home/nikola/.cache/fontconfig/c6e1e96f1a74b6a749fbd90ec98d50ac-le64.cache-4
+7f678a74e000-7f678a74f000 r--s 00000000 08:02 20973243                   /home/nikola/.cache/fontconfig/dd719294549e7c44f6a2d3871cb796e5-le64.cache-4
+7f678a74f000-7f678a750000 r--s 00000000 08:02 20973241                   /home/nikola/.cache/fontconfig/fe8aa10a265a2b94f934372f5327331e-le64.cache-4
+7f678a750000-7f678a752000 r--s 00000000 08:02 20973240                   /home/nikola/.cache/fontconfig/deb624abd115ba3b8298fe58e940fb2c-le64.cache-4
+7f678a752000-7f678a753000 r--s 00000000 08:02 20991972                   /home/nikola/.cache/fontconfig/be7221b030413efc680fbe30050dca05-le64.cache-4
+7f678a753000-7f678a757000 r--s 00000000 08:02 20973221                   /home/nikola/.cache/fontconfig/fbb01b4cea91916d665f1ff1c21c5fd4-le64.cache-4
+7f678a757000-7f678a75a000 r--s 00000000 08:02 20973214                   /home/nikola/.cache/fontconfig/df791b1307796adb6bfa1a9503a02328-le64.cache-4
+7f678a75a000-7f678a764000 r--s 00000000 08:02 20991790                   /home/nikola/.cache/fontconfig/f86703b96943bacb5e79aced1aa00611-le64.cache-4
+7f678a764000-7f678a765000 rw-s 00000000 00:04 377246                     /drm mm object (deleted)
+7f678a765000-7f678a766000 rwxp 00000000 00:00 0 
+7f678a7ff000-7f678a807000 rw-s 00000000 00:04 381161                     /drm mm object (deleted)
+7f678a807000-7f678a80f000 rw-s 00000000 00:04 381159                     /drm mm object (deleted)
+7f678a80f000-7f678a815000 rw-s 00000000 00:04 378649                     /drm mm object (deleted)
+7f678a815000-7f678a81b000 rw-s 00000000 00:04 378618                     /drm mm object (deleted)
+7f678a81b000-7f678a821000 rw-s 00000000 00:04 377575                     /drm mm object (deleted)
+7f678a821000-7f678a827000 rw-s 00000000 00:04 377550                     /drm mm object (deleted)
+7f678a827000-7f678a82d000 rw-s 00000000 00:04 378445                     /drm mm object (deleted)
+7f678a82d000-7f678a83d000 r-xp 00000000 08:02 21003670                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnio.so
+7f678a83d000-7f678aa3d000 ---p 00010000 08:02 21003670                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnio.so
+7f678aa3d000-7f678aa3e000 rw-p 00010000 08:02 21003670                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnio.so
+7f678aa3e000-7f678aa53000 r-xp 00000000 08:02 21003635                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnet.so
+7f678aa53000-7f678ac53000 ---p 00015000 08:02 21003635                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnet.so
+7f678ac53000-7f678ac54000 rw-p 00015000 08:02 21003635                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnet.so
+7f678ac54000-7f678ac6a000 r-xp 00000000 08:01 397667                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f678ac6a000-7f678ae69000 ---p 00016000 08:01 397667                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f678ae69000-7f678ae6a000 r--p 00015000 08:01 397667                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f678ae6a000-7f678ae6b000 rw-p 00016000 08:01 397667                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f678ae6b000-7f678aecb000 r-xp 00000000 08:02 21003631                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libfontmanager.so
+7f678aecb000-7f678b0ca000 ---p 00060000 08:02 21003631                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libfontmanager.so
+7f678b0ca000-7f678b0ce000 rw-p 0005f000 08:02 21003631                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libfontmanager.so
+7f678b0ce000-7f678b0df000 rw-p 00000000 00:00 0 
+7f678b0df000-7f678b0e2000 ---p 00000000 00:00 0 
+7f678b0e2000-7f678b1e0000 rw-p 00000000 00:00 0                          [stack:29892]
+7f678b1e0000-7f678b1e3000 ---p 00000000 00:00 0 
+7f678b1e3000-7f678b2e1000 rw-p 00000000 00:00 0                          [stack:29889]
+7f678b2e1000-7f678b2e4000 ---p 00000000 00:00 0 
+7f678b2e4000-7f678b3e2000 rw-p 00000000 00:00 0                          [stack:29888]
+7f678b3e2000-7f678b3e5000 ---p 00000000 00:00 0 
+7f678b3e5000-7f678b4e3000 rw-p 00000000 00:00 0 
+7f678b4e3000-7f678b4e6000 ---p 00000000 00:00 0 
+7f678b4e6000-7f678b5e4000 rw-p 00000000 00:00 0 
+7f678b5e4000-7f678b5e7000 ---p 00000000 00:00 0 
+7f678b5e7000-7f678b6e5000 rw-p 00000000 00:00 0                          [stack:29883]
+7f678b6e5000-7f678b6ea000 r-xp 00000000 08:01 271681                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f678b6ea000-7f678b8e9000 ---p 00005000 08:01 271681                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f678b8e9000-7f678b8ea000 r--p 00004000 08:01 271681                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f678b8ea000-7f678b8eb000 rw-p 00005000 08:01 271681                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f678b8eb000-7f678b8f4000 r-xp 00000000 08:01 271673                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f678b8f4000-7f678baf3000 ---p 00009000 08:01 271673                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f678baf3000-7f678baf4000 r--p 00008000 08:01 271673                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f678baf4000-7f678baf5000 rw-p 00009000 08:01 271673                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f678baf5000-7f678baf8000 ---p 00000000 00:00 0 
+7f678baf8000-7f678bbf6000 rw-p 00000000 00:00 0                          [stack:29882]
+7f678bbf6000-7f678bbfb000 r-xp 00000000 08:01 271677                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f678bbfb000-7f678bdfa000 ---p 00005000 08:01 271677                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f678bdfa000-7f678bdfb000 r--p 00004000 08:01 271677                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f678bdfb000-7f678bdfc000 rw-p 00005000 08:01 271677                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f678bdfc000-7f678bdfe000 r-xp 00000000 08:01 271666                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f678bdfe000-7f678bffe000 ---p 00002000 08:01 271666                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f678bffe000-7f678bfff000 r--p 00002000 08:01 271666                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f678bfff000-7f678c000000 rw-p 00003000 08:01 271666                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f678c000000-7f678c021000 rw-p 00000000 00:00 0 
+7f678c021000-7f6790000000 ---p 00000000 00:00 0 
+7f6790000000-7f6790021000 rw-p 00000000 00:00 0 
+7f6790021000-7f6794000000 ---p 00000000 00:00 0 
+7f6794000000-7f6795610000 rw-p 00000000 00:00 0 
+7f6795610000-7f6798000000 ---p 00000000 00:00 0 
+7f6798000000-7f679b73a000 rw-p 00000000 00:00 0 
+7f679b73a000-7f679c000000 ---p 00000000 00:00 0 
+7f679c000000-7f679c021000 rw-p 00000000 00:00 0 
+7f679c021000-7f67a0000000 ---p 00000000 00:00 0 
+7f67a0000000-7f67a0021000 rw-p 00000000 00:00 0 
+7f67a0021000-7f67a4000000 ---p 00000000 00:00 0 
+7f67a4000000-7f67a4021000 rw-p 00000000 00:00 0 
+7f67a4021000-7f67a8000000 ---p 00000000 00:00 0 
+7f67a8000000-7f67a8021000 rw-p 00000000 00:00 0 
+7f67a8021000-7f67ac000000 ---p 00000000 00:00 0 
+7f67ac000000-7f67ac021000 rw-p 00000000 00:00 0 
+7f67ac021000-7f67b0000000 ---p 00000000 00:00 0 
+7f67b0000000-7f67b0021000 rw-p 00000000 00:00 0 
+7f67b0021000-7f67b4000000 ---p 00000000 00:00 0 
+7f67b4000000-7f67b4021000 rw-p 00000000 00:00 0 
+7f67b4021000-7f67b8000000 ---p 00000000 00:00 0 
+7f67b8000000-7f67b8021000 rw-p 00000000 00:00 0 
+7f67b8021000-7f67bc000000 ---p 00000000 00:00 0 
+7f67bc000000-7f67bc021000 rw-p 00000000 00:00 0 
+7f67bc021000-7f67c0000000 ---p 00000000 00:00 0 
+7f67c0000000-7f67c0021000 rw-p 00000000 00:00 0 
+7f67c0021000-7f67c4000000 ---p 00000000 00:00 0 
+7f67c4000000-7f67c4021000 rw-p 00000000 00:00 0 
+7f67c4021000-7f67c8000000 ---p 00000000 00:00 0 
+7f67c8000000-7f67c8001000 rw-s 00000000 00:04 378252                     /drm mm object (deleted)
+7f67c8005000-7f67c800b000 rw-s 00000000 00:04 380183                     /drm mm object (deleted)
+7f67c800b000-7f67c8011000 rw-s 00000000 00:04 379969                     /drm mm object (deleted)
+7f67c8011000-7f67c8017000 rw-s 00000000 00:04 378285                     /drm mm object (deleted)
+7f67c8017000-7f67c801d000 rw-s 00000000 00:04 377377                     /drm mm object (deleted)
+7f67c801d000-7f67c8023000 rw-s 00000000 00:04 377360                     /drm mm object (deleted)
+7f67c8023000-7f67c8029000 rw-s 00000000 00:04 377353                     /drm mm object (deleted)
+7f67c802b000-7f67c8031000 rw-s 00000000 00:04 380021                     /drm mm object (deleted)
+7f67c8031000-7f67c804e000 r-xp 00000000 08:01 272747                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f67c804e000-7f67c824e000 ---p 0001d000 08:01 272747                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f67c824e000-7f67c824f000 r--p 0001d000 08:01 272747                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f67c824f000-7f67c8250000 rw-p 0001e000 08:01 272747                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f67c8250000-7f67c825f000 r-xp 00000000 08:01 271687                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f67c825f000-7f67c845e000 ---p 0000f000 08:01 271687                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f67c845e000-7f67c845f000 r--p 0000e000 08:01 271687                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f67c845f000-7f67c8460000 rw-p 0000f000 08:01 271687                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f67c8460000-7f67c8465000 r-xp 00000000 08:01 271707                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f67c8465000-7f67c8664000 ---p 00005000 08:01 271707                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f67c8664000-7f67c8665000 r--p 00004000 08:01 271707                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f67c8665000-7f67c8666000 rw-p 00005000 08:01 271707                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f67c8666000-7f67c866f000 r-xp 00000000 08:01 271701                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f67c866f000-7f67c886e000 ---p 00009000 08:01 271701                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f67c886e000-7f67c886f000 r--p 00008000 08:01 271701                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f67c886f000-7f67c8870000 rw-p 00009000 08:01 271701                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f67c8870000-7f67c89a3000 r-xp 00000000 08:01 271662                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f67c89a3000-7f67c8ba3000 ---p 00133000 08:01 271662                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f67c8ba3000-7f67c8ba4000 r--p 00133000 08:01 271662                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f67c8ba4000-7f67c8ba8000 rw-p 00134000 08:01 271662                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f67c8ba8000-7f67c8ba9000 rw-p 00000000 00:00 0 
+7f67c8ba9000-7f67c8bba000 r-xp 00000000 08:01 271679                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f67c8bba000-7f67c8db9000 ---p 00011000 08:01 271679                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f67c8db9000-7f67c8dba000 r--p 00010000 08:01 271679                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f67c8dba000-7f67c8dbb000 rw-p 00011000 08:01 271679                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f67c8dbb000-7f67c8dbe000 r--s 00000000 08:02 20991789                   /home/nikola/.cache/fontconfig/56c46477f231c4d484c800a317b07176-le64.cache-4
+7f67c8dbe000-7f67c8dbf000 r--p 00000000 00:00 0 
+7f67c8dc1000-7f67c8dc2000 rw-s 00000000 00:04 377352                     /drm mm object (deleted)
+7f67c8dc2000-7f67c8dc3000 rw-p 00000000 00:00 0 
+7f67c8dc3000-7f67c8dcb000 rw-s 00000000 00:04 379282                     /drm mm object (deleted)
+7f67c8dcb000-7f67c8dd2000 r--s 00000000 08:01 799721                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f67c8dd2000-7f67c8e22000 r-xp 00000000 08:02 21003650                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/xawt/libmawt.so
+7f67c8e22000-7f67c9022000 ---p 00050000 08:02 21003650                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/xawt/libmawt.so
+7f67c9022000-7f67c9026000 rw-p 00050000 08:02 21003650                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/xawt/libmawt.so
+7f67c9026000-7f67c9027000 rw-p 00000000 00:00 0 
+7f67c9027000-7f67c90ca000 r-xp 00000000 08:02 21003651                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libawt.so
+7f67c90ca000-7f67c92ca000 ---p 000a3000 08:02 21003651                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libawt.so
+7f67c92ca000-7f67c92d6000 rw-p 000a3000 08:02 21003651                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libawt.so
+7f67c92d6000-7f67c92fa000 rw-p 00000000 00:00 0 
+7f67c92fa000-7f67c930e000 r--s 00141000 08:02 21002962                   /home/nikola/apps/processing-2.2.1/lib/org.eclipse.osgi_3.8.1.v20120830-144521.jar
+7f67c930e000-7f67c9322000 r--s 00127000 08:02 21002939                   /home/nikola/apps/processing-2.2.1/lib/jna.jar
+7f67c9322000-7f67c9323000 ---p 00000000 00:00 0 
+7f67c9323000-7f67c9423000 rw-p 00000000 00:00 0                          [stack:29877]
+7f67c9423000-7f67c9426000 ---p 00000000 00:00 0 
+7f67c9426000-7f67c9524000 rw-p 00000000 00:00 0                          [stack:29876]
+7f67c9524000-7f67c9527000 ---p 00000000 00:00 0 
+7f67c9527000-7f67c9625000 rw-p 00000000 00:00 0                          [stack:29875]
+7f67c9625000-7f67c9628000 ---p 00000000 00:00 0 
+7f67c9628000-7f67c9726000 rw-p 00000000 00:00 0                          [stack:29874]
+7f67c9726000-7f67c9729000 ---p 00000000 00:00 0 
+7f67c9729000-7f67c9827000 rw-p 00000000 00:00 0                          [stack:29851]
+7f67c9827000-7f67c982a000 ---p 00000000 00:00 0 
+7f67c982a000-7f67c9928000 rw-p 00000000 00:00 0                          [stack:29846]
+7f67c9928000-7f67c992b000 ---p 00000000 00:00 0 
+7f67c992b000-7f67c9a29000 rw-p 00000000 00:00 0                          [stack:29845]
+7f67c9a29000-7f67c9a2d000 r-xp 00000000 08:02 21003652                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libdt_socket.so
+7f67c9a2d000-7f67c9c2c000 ---p 00004000 08:02 21003652                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libdt_socket.so
+7f67c9c2c000-7f67c9c2d000 rw-p 00003000 08:02 21003652                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libdt_socket.so
+7f67c9c2d000-7f67c9c30000 ---p 00000000 00:00 0 
+7f67c9c30000-7f67c9d2e000 rw-p 00000000 00:00 0                          [stack:29844]
+7f67c9d2e000-7f67c9d31000 ---p 00000000 00:00 0 
+7f67c9d31000-7f67c9e2f000 rw-p 00000000 00:00 0                          [stack:29841]
+7f67c9e2f000-7f67c9e32000 ---p 00000000 00:00 0 
+7f67c9e32000-7f67cd000000 rw-p 00000000 00:00 0                          [stack:29840]
+7f67cd000000-7f67cd270000 rwxp 00000000 00:00 0 
+7f67cd270000-7f67d0314000 rw-p 00000000 00:00 0 
+7f67d0314000-7f67d4000000 ---p 00000000 00:00 0 
+7f67d4000000-7f67d4001000 r--s 00000000 08:02 20973224                   /home/nikola/.cache/fontconfig/f78f3ad573845e9072314bedda7af0e8-le64.cache-4
+7f67d4001000-7f67d4002000 r--s 00000000 08:02 20991814                   /home/nikola/.cache/fontconfig/6b5290e713920c85ed0f1bc684907728-le64.cache-4
+7f67d4002000-7f67d4006000 r--s 00000000 08:01 527339                     /var/cache/fontconfig/7ef2298fde41cc6eeb7af42e48b7d293-le64.cache-4
+7f67d4006000-7f67d400f000 r--s 0009f000 08:02 21002935                   /home/nikola/apps/processing-2.2.1/lib/pde.jar
+7f67d400f000-7f67d4012000 r--s 00041000 08:02 21002938                   /home/nikola/apps/processing-2.2.1/lib/org-netbeans-swing-outline.jar
+7f67d4012000-7f67d401f000 r--s 000c6000 08:02 21002941                   /home/nikola/apps/processing-2.2.1/lib/jdimodel.jar
+7f67d401f000-7f67d4023000 r--s 0000e000 08:02 21002937                   /home/nikola/apps/processing-2.2.1/lib/jdi.jar
+7f67d4023000-7f67d405f000 r--s 00629000 08:02 21002936                   /home/nikola/apps/processing-2.2.1/lib/com.ibm.icu_4.4.2.v20110823.jar
+7f67d405f000-7f67d4064000 r--s 00068000 08:02 21002960                   /home/nikola/apps/processing-2.2.1/lib/antlr.jar
+7f67d4064000-7f67d4082000 r--s 001bb000 08:02 21002952                   /home/nikola/apps/processing-2.2.1/lib/ant.jar
+7f67d4082000-7f67d4084000 r--s 00002000 08:02 21002951                   /home/nikola/apps/processing-2.2.1/lib/ant-launcher.jar
+7f67d4084000-7f67d4085000 r--s 00005000 08:02 21108111                   /home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library/mp3spi1.9.4.jar
+7f67d4085000-7f67d4088000 r--s 00017000 08:02 21108115                   /home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library/tritonus_share.jar
+7f67d4088000-7f67d408b000 r--s 00017000 08:02 21108116                   /home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library/jl1.0.jar
+7f67d408b000-7f67d408d000 r--s 0000a000 08:02 21108117                   /home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library/jsminim.jar
+7f67d408d000-7f67d4090000 r--s 00016000 08:02 21108114                   /home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library/minim.jar
+7f67d4090000-7f67d4091000 r--s 00002000 08:02 21108112                   /home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library/tritonus_aos.jar
+7f67d4091000-7f67d4092000 r--s 00063000 08:02 21002847                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-macosx-universal.jar
+7f67d4092000-7f67d4094000 r--s 00030000 08:02 21002853                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-linux-i586.jar
+7f67d4094000-7f67d4095000 r--s 00000000 08:02 21002852                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-linux-i586.jar
+7f67d4095000-7f67d4096000 r--s 00034000 08:02 21002859                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-windows-amd64.jar
+7f67d4096000-7f67d40a1000 r--s 00358000 08:02 21003486                   /home/nikola/apps/processing-2.2.1/java/lib/charsets.jar
+7f67d40a1000-7f67d40a5000 r--s 00097000 08:02 21002855                   /home/nikola/apps/processing-2.2.1/core/library/core.jar
+7f67d40a5000-7f67d40c6000 r--s 002d0000 08:02 21002861                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all.jar
+7f67d40c6000-7f67d40c7000 ---p 00000000 00:00 0 
+7f67d40c7000-7f67d51c6000 rw-p 00000000 00:00 0                          [stack:29839]
+7f67d51c6000-7f67d5383000 r--s 031b5000 08:02 21003022                   /home/nikola/apps/processing-2.2.1/java/lib/rt.jar
+7f67d5383000-7f67d5789000 rw-p 00000000 00:00 0 
+7f67d5789000-7f67d578a000 ---p 00000000 00:00 0 
+7f67d578a000-7f67d588a000 rw-p 00000000 00:00 0                          [stack:29838]
+7f67d588a000-7f67d588b000 ---p 00000000 00:00 0 
+7f67d588b000-7f67d598b000 rw-p 00000000 00:00 0                          [stack:29837]
+7f67d598b000-7f67d598c000 ---p 00000000 00:00 0 
+7f67d598c000-7f67d5a8c000 rw-p 00000000 00:00 0                          [stack:29836]
+7f67d5a8c000-7f67d5a8d000 ---p 00000000 00:00 0 
+7f67d5a8d000-7f67d5b98000 rw-p 00000000 00:00 0                          [stack:29835]
+7f67d5b98000-7f67d5bb6000 rw-p 00000000 00:00 0 
+7f67d5bb6000-7f67d5bd5000 rw-p 00000000 00:00 0 
+7f67d5bd5000-7f67d5da4000 rw-p 00000000 00:00 0 
+7f67d5da4000-7f67d5daf000 rw-p 00000000 00:00 0 
+7f67d5daf000-7f67d5dcd000 rw-p 00000000 00:00 0 
+7f67d5dcd000-7f67d5dec000 rw-p 00000000 00:00 0 
+7f67d5dec000-7f67d5fba000 rw-p 00000000 00:00 0 
+7f67d5fba000-7f67d5ffa000 rw-p 00000000 00:00 0 
+7f67d5ffa000-7f67d60b1000 rw-p 00000000 00:00 0 
+7f67d60b1000-7f67d60b2000 rw-p 00000000 00:00 0 
+7f67d60b2000-7f67d60cc000 r-xp 00000000 08:02 21003660                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libzip.so
+7f67d60cc000-7f67d62cc000 ---p 0001a000 08:02 21003660                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libzip.so
+7f67d62cc000-7f67d62cd000 rw-p 0001a000 08:02 21003660                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libzip.so
+7f67d62cd000-7f67d62d8000 r-xp 00000000 08:01 399201                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f67d62d8000-7f67d64d7000 ---p 0000b000 08:01 399201                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f67d64d7000-7f67d64d8000 r--p 0000a000 08:01 399201                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f67d64d8000-7f67d64d9000 rw-p 0000b000 08:01 399201                     /lib/x86_64-linux-gnu/libnss_files-2.19.so
+7f67d64d9000-7f67d64e4000 r-xp 00000000 08:01 393312                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f67d64e4000-7f67d66e3000 ---p 0000b000 08:01 393312                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f67d66e3000-7f67d66e4000 r--p 0000a000 08:01 393312                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f67d66e4000-7f67d66e5000 rw-p 0000b000 08:01 393312                     /lib/x86_64-linux-gnu/libnss_nis-2.19.so
+7f67d66e5000-7f67d66fc000 r-xp 00000000 08:01 399203                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f67d66fc000-7f67d68fb000 ---p 00017000 08:01 399203                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f67d68fb000-7f67d68fc000 r--p 00016000 08:01 399203                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f67d68fc000-7f67d68fd000 rw-p 00017000 08:01 399203                     /lib/x86_64-linux-gnu/libnsl-2.19.so
+7f67d68fd000-7f67d68ff000 rw-p 00000000 00:00 0 
+7f67d68ff000-7f67d6908000 r-xp 00000000 08:01 397610                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f67d6908000-7f67d6b07000 ---p 00009000 08:01 397610                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f67d6b07000-7f67d6b08000 r--p 00008000 08:01 397610                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f67d6b08000-7f67d6b09000 rw-p 00009000 08:01 397610                     /lib/x86_64-linux-gnu/libnss_compat-2.19.so
+7f67d6b09000-7f67d731c000 r--p 00000000 08:01 270264                     /usr/lib/locale/locale-archive
+7f67d731c000-7f67d731f000 r-xp 00000000 08:02 21003647                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnpt.so
+7f67d731f000-7f67d751e000 ---p 00003000 08:02 21003647                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnpt.so
+7f67d751e000-7f67d751f000 rw-p 00002000 08:02 21003647                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libnpt.so
+7f67d751f000-7f67d7558000 r-xp 00000000 08:02 21003658                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjdwp.so
+7f67d7558000-7f67d7758000 ---p 00039000 08:02 21003658                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjdwp.so
+7f67d7758000-7f67d7759000 rw-p 00039000 08:02 21003658                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjdwp.so
+7f67d7759000-7f67d775a000 rw-p 00000000 00:00 0 
+7f67d775a000-7f67d7783000 r-xp 00000000 08:02 21003671                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjava.so
+7f67d7783000-7f67d7983000 ---p 00029000 08:02 21003671                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjava.so
+7f67d7983000-7f67d7985000 rw-p 00029000 08:02 21003671                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libjava.so
+7f67d7985000-7f67d7992000 r-xp 00000000 08:02 21003633                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libverify.so
+7f67d7992000-7f67d7b91000 ---p 0000d000 08:02 21003633                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libverify.so
+7f67d7b91000-7f67d7b93000 rw-p 0000c000 08:02 21003633                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/libverify.so
+7f67d7b93000-7f67d7b9a000 r-xp 00000000 08:01 397743                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f67d7b9a000-7f67d7d99000 ---p 00007000 08:01 397743                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f67d7d99000-7f67d7d9a000 r--p 00006000 08:01 397743                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f67d7d9a000-7f67d7d9b000 rw-p 00007000 08:01 397743                     /lib/x86_64-linux-gnu/librt-2.19.so
+7f67d7d9b000-7f67d7ea0000 r-xp 00000000 08:01 399200                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f67d7ea0000-7f67d809f000 ---p 00105000 08:01 399200                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f67d809f000-7f67d80a0000 r--p 00104000 08:01 399200                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f67d80a0000-7f67d80a1000 rw-p 00105000 08:01 399200                     /lib/x86_64-linux-gnu/libm-2.19.so
+7f67d80a1000-7f67d8c03000 r-xp 00000000 08:02 21003645                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/server/libjvm.so
+7f67d8c03000-7f67d8e03000 ---p 00b62000 08:02 21003645                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/server/libjvm.so
+7f67d8e03000-7f67d8ec6000 rw-p 00b62000 08:02 21003645                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/server/libjvm.so
+7f67d8ec6000-7f67d8f07000 rw-p 00000000 00:00 0 
+7f67d8f07000-7f67d90c1000 r-xp 00000000 08:01 406007                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f67d90c1000-7f67d92c1000 ---p 001ba000 08:01 406007                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f67d92c1000-7f67d92c5000 r--p 001ba000 08:01 406007                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f67d92c5000-7f67d92c7000 rw-p 001be000 08:01 406007                     /lib/x86_64-linux-gnu/libc-2.19.so
+7f67d92c7000-7f67d92cc000 rw-p 00000000 00:00 0 
+7f67d92cc000-7f67d92cf000 r-xp 00000000 08:01 393320                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7f67d92cf000-7f67d94ce000 ---p 00003000 08:01 393320                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7f67d94ce000-7f67d94cf000 r--p 00002000 08:01 393320                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7f67d94cf000-7f67d94d0000 rw-p 00003000 08:01 393320                     /lib/x86_64-linux-gnu/libdl-2.19.so
+7f67d94d0000-7f67d94e6000 r-xp 00000000 08:02 21003630                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/jli/libjli.so
+7f67d94e6000-7f67d96e6000 ---p 00016000 08:02 21003630                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/jli/libjli.so
+7f67d96e6000-7f67d96e7000 rw-p 00016000 08:02 21003630                   /home/nikola/apps/processing-2.2.1/java/lib/amd64/jli/libjli.so
+7f67d96e7000-7f67d9700000 r-xp 00000000 08:01 406009                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f67d9700000-7f67d98ff000 ---p 00019000 08:01 406009                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f67d98ff000-7f67d9900000 r--p 00018000 08:01 406009                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f67d9900000-7f67d9901000 rw-p 00019000 08:01 406009                     /lib/x86_64-linux-gnu/libpthread-2.19.so
+7f67d9901000-7f67d9905000 rw-p 00000000 00:00 0 
+7f67d9905000-7f67d9928000 r-xp 00000000 08:01 393319                     /lib/x86_64-linux-gnu/ld-2.19.so
+7f67d9928000-7f67d9929000 r--s 00001000 08:02 21002860                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-macosx-universal.jar
+7f67d9929000-7f67d992a000 r--s 00000000 08:02 21002862                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-linux-armv6hf.jar
+7f67d992a000-7f67d9953000 rw-p 00000000 00:00 0 
+7f67d9953000-7f67d9a09000 rw-p 00000000 00:00 0 
+7f67d9a09000-7f67d9a0c000 ---p 00000000 00:00 0 
+7f67d9a0c000-7f67d9b0e000 rw-p 00000000 00:00 0                          [stack:29834]
+7f67d9b0e000-7f67d9b0f000 r--s 00031000 08:02 21002858                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-linux-amd64.jar
+7f67d9b0f000-7f67d9b10000 r--s 0002d000 08:02 21002492                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-windows-i586.jar
+7f67d9b10000-7f67d9b11000 r--s 00000000 08:02 21002854                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-linux-amd64.jar
+7f67d9b11000-7f67d9b12000 r--s 00001000 08:02 21002851                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-windows-amd64.jar
+7f67d9b12000-7f67d9b18000 r--s 00041000 08:02 21002849                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt.jar
+7f67d9b18000-7f67d9b19000 r--s 00022000 08:02 21002856                   /home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-linux-armv6hf.jar
+7f67d9b19000-7f67d9b1a000 r--s 00001000 08:02 21002863                   /home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-windows-i586.jar
+7f67d9b1a000-7f67d9b1b000 rw-p 00000000 00:00 0 
+7f67d9b1b000-7f67d9b23000 rw-s 00000000 08:01 412844                     /tmp/hsperfdata_nikola/29832
+7f67d9b23000-7f67d9b24000 rw-p 00000000 00:00 0 
+7f67d9b24000-7f67d9b25000 r--p 00000000 00:00 0 
+7f67d9b25000-7f67d9b27000 rw-p 00000000 00:00 0 
+7f67d9b27000-7f67d9b28000 r--p 00022000 08:01 393319                     /lib/x86_64-linux-gnu/ld-2.19.so
+7f67d9b28000-7f67d9b29000 rw-p 00023000 08:01 393319                     /lib/x86_64-linux-gnu/ld-2.19.so
+7f67d9b29000-7f67d9b2a000 rw-p 00000000 00:00 0 
+7fffb66f9000-7fffb671c000 rw-p 00000000 00:00 0                          [stack]
+7fffb6739000-7fffb673b000 r-xp 00000000 00:00 0                          [vdso]
+7fffb673b000-7fffb673d000 r--p 00000000 00:00 0                          [vvar]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -agentlib:jdwp=transport=dt_socket,address=8503,server=y,suspend=y -Djava.library.path=:/home/nikola/apps/processing-2.2.1/modes/java/libraries/minim/library:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib -ea 
+java_command: processing.core.PApplet --display=0 philosophy2011 --sketch-path=/home/nikola/Dokumenty/Projekty/philosophy2011/philosophy2011
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=/home/nikola/apps/processing-2.2.1/java/lib/rt.jar:/home/nikola/apps/processing-2.2.1/lib/ant-launcher.jar:/home/nikola/apps/processing-2.2.1/lib/ant.jar:/home/nikola/apps/processing-2.2.1/lib/antlr.jar:/home/nikola/apps/processing-2.2.1/lib/com.ibm.icu_4.4.2.v20110823.jar:/home/nikola/apps/processing-2.2.1/lib/jdi.jar:/home/nikola/apps/processing-2.2.1/lib/jdimodel.jar:/home/nikola/apps/processing-2.2.1/lib/jna.jar:/home/nikola/apps/processing-2.2.1/lib/org-netbeans-swing-outline.jar:/home/nikola/apps/processing-2.2.1/lib/org.eclipse.osgi_3.8.1.v20120830-144521.jar:/home/nikola/apps/processing-2.2.1/lib/pde.jar:/home/nikola/apps/processing-2.2.1/core/library/core.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-linux-amd64.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-linux-armv6hf.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-linux-i586.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-macosx-universal.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-windows-amd64.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt-natives-windows-i586.jar:/home/nikola/apps/processing-2.2.1/core/library/gluegen-rt.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-linux-amd64.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-linux-armv6hf.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-linux-i586.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-macosx-universal.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-windows-amd64.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all-natives-windows-i586.jar:/home/nikola/apps/processing-2.2.1/core/library/jogl-all.jar
+PATH=/home/nikola/apps/processing-2.2.1/java/bin:/home/nikola/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/local/bin:/usr/local/sbin:/usr/local/share/npm/bin
+USERNAME=nikola
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x992d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x992d50], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x80fb00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x80fb00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x80fb00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x80fb00], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x810ff0], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x811f60], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x811f60], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x811f60], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x811f60], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:jessie/sid
+
+uname:Linux 3.16.0-30-generic #40-Ubuntu SMP Mon Jan 12 22:06:37 UTC 2015 x86_64
+libc:glibc 2.19 NPTL 2.19 
+rlimit: STACK 8192k, CORE 0k, NPROC 23561, NOFILE 4096, AS infinity
+load average:1,75 1,83 2,06
+
+/proc/meminfo:
+MemTotal:        6053900 kB
+MemFree:          289284 kB
+MemAvailable:    2464736 kB
+Buffers:          132024 kB
+Cached:          2279052 kB
+SwapCached:          816 kB
+Active:          3276240 kB
+Inactive:        1995676 kB
+Active(anon):    2083772 kB
+Inactive(anon):  1088280 kB
+Active(file):    1192468 kB
+Inactive(file):   907396 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:       1952764 kB
+SwapFree:        1902380 kB
+Dirty:               164 kB
+Writeback:             0 kB
+AnonPages:       2860136 kB
+Mapped:           313372 kB
+Shmem:            311212 kB
+Slab:             364344 kB
+SReclaimable:     328980 kB
+SUnreclaim:        35364 kB
+KernelStack:        8816 kB
+PageTables:        33772 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4979712 kB
+Committed_AS:    6434376 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      367296 kB
+VmallocChunk:   34359358972 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:    989184 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       71936 kB
+DirectMap2M:     6162432 kB
+
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x17
+cpu MHz		: 1728.070
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4190.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x17
+cpu MHz		: 2099.753
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4190.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x17
+cpu MHz		: 2100.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4190.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 42
+model name	: Intel(R) Core(TM) i3-2310M CPU @ 2.10GHz
+stepping	: 7
+microcode	: 0x17
+cpu MHz		: 2099.753
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 1
+cpu cores	: 2
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer xsave avx lahf_lm arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4190.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 6053900k(289284k free), swap 1952764k(1902380k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (24.0-b56) for linux-amd64 JRE (1.7.0_40-b43), built on Aug 26 2013 23:53:33 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Fri Feb 20 21:54:28 2015
+elapsed time: 107 seconds
+
